@@ -17,19 +17,25 @@ import {
 const fireBaseBackend = getFirebaseBackend();
 
 // Is user register successfull then direct plot user in redux.
-export const registerUser = (user: any) => async (dispatch: any) => {
+export const registerUser = (user: any,setshowVarification:any) => async (dispatch: any) => {
   try {
     let response;
-
-    if (process.env.REACT_APP_DEFAULTAUTH === "firebase") {
-      response = fireBaseBackend.registerUser(user.email, user.password);
-    } else if (process.env.REACT_APP_DEFAULTAUTH === "jwt") {
-      response = postJwtRegister('/post-jwt-register', user);
-    } else if (process.env.REACT_APP_DEFAULTAUTH) {
-      response = postFakeRegister(user);
-      const data: any = await response;
+    response = postJwtRegister('/post-jwt-register', user);
+    const data: any = await response;
       dispatch(registerUserSuccessful(data));
-    }
+      // setshowVarification(true);
+
+
+    // if (process.env.REACT_APP_DEFAULTAUTH === "firebase") {
+    //   response = fireBaseBackend.registerUser(user.email, user.password);
+    // } else if (process.env.REACT_APP_DEFAULTAUTH === "jwt") {
+    //   response = postJwtRegister('/post-jwt-register', user);
+    // } else if (process.env.REACT_APP_DEFAULTAUTH) {
+    //   response = postFakeRegister(user);
+    //   const data: any = await response;
+    //   dispatch(registerUserSuccessful(data));
+    //   setshowVarification(true)
+    // }
   } catch (error) {
     dispatch(registerUserFailed(error));
   }

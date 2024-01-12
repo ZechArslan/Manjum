@@ -165,7 +165,7 @@ import UserProfile from "../pages/Authentication/user-profile";
 import ForgotPassword from "../pages/Authentication/ForgotPassword";
 import SignUp from "../pages/Authentication/Register";
 import FormValidations from "../pages/Forms/FormValidations";
-
+import VarificationScreen from "Components/Common/VerificationScreen/Index";
 
 const authProtectedRoutes = [
   { path: "/dashboard", component: <Dashboard /> },
