@@ -36,6 +36,7 @@ import Breadcrumbs from "../../Components/Common/Breadcrumb";
 //Import images
 import verificationImg from "../../assets/images/verification-img.png";
 import moment from "moment";
+import Image from "next/image";
 
 const CryptoKYCApplication = () => {
 
@@ -135,7 +136,7 @@ const CryptoKYCApplication = () => {
                     <Row className="justify-content-center mt-5 mb-2">
                       <Col sm={6} xs={8}>
                         <div>
-                          <img src={verificationImg} alt="" className="img-fluid" />
+                          <Image src={verificationImg} alt="" className="img-fluid" />
                         </div>
                       </Col>
                     </Row>
@@ -477,7 +478,7 @@ const CryptoKYCApplication = () => {
                                           <div className="d-flex flex-wrap gap-2 p-2">
                                             <div className="flex-shrink-0 me-3">
                                               <div className="avatar-sm bg-light rounded p-2">
-                                                <img data-dz-thumbnail="" className="img-fluid rounded d-block" src={file.preview} alt={file.name} />
+                                                <Image data-dz-thumbnail="" className="img-fluid rounded d-block" src={file.preview} alt={file.name} />
                                               </div>
                                             </div>
                                             <div className="flex-grow-1">

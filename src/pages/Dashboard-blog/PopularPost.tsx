@@ -3,6 +3,7 @@ import { Card, CardBody, Col, DropdownMenu, DropdownToggle, UncontrolledDropdown
 import { Link } from "react-router-dom"
 import { blogPost } from "../../common/data";
 import { BlogPopularPost } from "./type";
+import Image from "next/image";
 
 const PopularPost: React.FC = () => {
 
@@ -44,7 +45,7 @@ const PopularPost: React.FC = () => {
                   {(blogPost || [])?.map((popularPost: BlogPopularPost, key: number) => (
                     <tr key={key}>
                       <td style={{ width: "100px" }}>
-                        <img src={popularPost.img} alt="" className="avatar-md h-auto d-block rounded" />
+                        <Image src={popularPost.img} alt="" className="avatar-md h-auto d-block rounded" />
                       </td>
                       <td>
                         <h5 className="font-size-13 text-truncate mb-1">

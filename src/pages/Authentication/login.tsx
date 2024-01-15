@@ -15,10 +15,11 @@ import logo from "../../assets/images/logo.svg";
 import lightlogo from "../../assets/images/logo-light.svg";
 
 //import thunk
-import { loginuser, resetLoginMsgFlag, socialLogin } from "slices/auth/login/thunk";
+import { loginuser, resetLoginMsgFlag, socialLogin } from "../../slices/auth/login/thunk";
 
-import withRouter from "Components/Common/withRouter";
+import withRouter from "../../Components/Common/withRouter";
 import { createSelector } from 'reselect';
+import Image from "next/image";
 
 const Login = (props: any) => {
   const [show, setShow] = useState(false);
@@ -87,7 +88,7 @@ const Login = (props: any) => {
                       </div>
                     </Col>
                     <Col className="col-5 align-self-end">
-                      <img src={profile} alt="" className="img-fluid" />
+                      <Image src={profile} alt="" className="img-fluid" />
                     </Col>
                   </Row>
                 </div>
@@ -96,7 +97,7 @@ const Login = (props: any) => {
                     <Link to="/" className="auth-logo-light">
                       <div className="avatar-md profile-user-wid mb-4">
                         <span className="avatar-title rounded-circle bg-light">
-                          <img
+                          <Image
                             src={lightlogo}
                             alt=""
                             className="rounded-circle"
@@ -108,7 +109,7 @@ const Login = (props: any) => {
                     <Link to="/" className="auth-logo-dark">
                       <div className="avatar-md profile-user-wid mb-4">
                         <span className="avatar-title rounded-circle bg-light">
-                          <img
+                          <Image
                             src={logo}
                             alt=""
                             className="rounded-circle"

@@ -7,7 +7,8 @@ import { useFormik } from "formik";
 
 // format number
 import { PatternFormat } from "react-number-format";
-import Paginations from 'Components/Common/Pagination';
+import Paginations from '../../../Components/Common/Pagination';
+import Image from 'next/image';
 
 const JobData = ({ jobGrid }: any) => {
     const [modal, setModal] = useState(false) as any[];
@@ -53,7 +54,7 @@ const JobData = ({ jobGrid }: any) => {
                                 <div className="favorite-icon">
                                     <Link to="#"><i className="uil uil-heart-alt fs-18"></i></Link>
                                 </div>
-                                <img src={item.img} alt="" height="50" className="mb-3" />
+                                <Image src={item.img} alt="" height="50" className="mb-3" />
                                 <h5 className="fs-17 mb-2">
                                     <Link to="/job-details" className="text-dark">{item.title}</Link> <small className="text-muted fw-normal">(0-2 Yrs Exp.)</small></h5>
                                 <ul className="list-inline mb-0">

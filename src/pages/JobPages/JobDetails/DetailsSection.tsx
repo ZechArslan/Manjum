@@ -4,6 +4,7 @@ import { Card, CardBody, Col } from 'reactstrap';
 
 //import images
 import wechat from "../../../assets/images/companies/wechat.svg";
+import Image from 'next/image';
 
 const DetailsSection = () => {
     return (
@@ -12,7 +13,7 @@ const DetailsSection = () => {
                 <Card>
                     <CardBody className="border-bottom">
                         <div className="d-flex">
-                            <img src={wechat} alt="" height="50" />
+                            <Image src={wechat} alt="" height="50" />
                             <div className="flex-grow-1 ms-3">
                                 <h5 className="fw-semibold">Magento Developer</h5>
                                 <ul className="list-unstyled hstack gap-2 mb-0">

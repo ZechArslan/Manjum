@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Row, Col, Card, CardBody, InputGroup, InputGroupText, CardTitle, Badge } from "reactstrap";
 import { Link } from "react-router-dom";
-import ReactApexChart from "react-apexcharts";
-
+import dynamic from "next/dynamic";
+const ReactApexChart = dynamic(() => import("react-apexcharts").then((mod) => mod.default), {
+  ssr: false
+});
 //actions
 import { getEarningChartsData } from "../../slices/dashboards/thunk";
 
@@ -122,7 +124,10 @@ const Earning = ({ dataColors }: any) => {
 
               <Col lg={8}>
                 <div id="line-chart" dir="ltr">
+                  {
+ (typeof window !== 'undefined') &&
                   <ReactApexChart series={series} options={options} type="line" height={320} className="apex-charts" />
+                  }
                 </div>
               </Col>
             </Row>

@@ -5,6 +5,7 @@ import { Card, CardBody, Col, Container, Row } from 'reactstrap';
 import avatar from "../../../assets/images/users/avatar-6.jpg";
 import AboutUs from './AboutUs';
 import Sidebar from './Sidebar';
+import Image from 'next/image';
 
 const CandidateOverview = () => {
     document.title = "Candidate Overview | Skote - React Admin & Dashboard Template";
@@ -26,7 +27,7 @@ const CandidateOverview = () => {
                             <Card className="mx-n4 mt-n4 bg-info-subtle">
                                 <CardBody>
                                     <div className="text-center mb-4">
-                                        <img src={avatar} alt="" className="avatar-md rounded-circle mx-auto d-block" />
+                                        <Image src={avatar} alt="" className="avatar-md rounded-circle mx-auto d-block" />
                                         <h5 className="mt-3 mb-1">Steven Franklin</h5>
                                         <p className="text-muted mb-3">UI/UX Designer</p>
                                         <div className="mx-auto">

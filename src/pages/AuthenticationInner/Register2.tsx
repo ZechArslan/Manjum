@@ -10,6 +10,7 @@ import { useFormik } from "formik";
 import logodark from "../../assets/images/logo-dark.png";
 import logolight from "../../assets/images/logo-light.png";
 import CarouselPage from "./CarouselPage";
+import Image from "next/image";
 
 const Register2 = () => {
 
@@ -48,13 +49,13 @@ const Register2 = () => {
                   <div className="d-flex flex-column h-100">
                     <div className="mb-4 mb-md-5">
                       <Link to="/dashboard" className="d-block auth-logo">
-                        <img
+                        <Image
                           src={logodark}
                           alt=""
                           height="18"
                           className="auth-logo-dark"
                         />
-                        <img
+                        <Image
                           src={logolight}
                           alt=""
                           height="18"

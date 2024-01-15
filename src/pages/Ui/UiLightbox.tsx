@@ -33,6 +33,7 @@ import img7 from "../../assets/images/small/img-7.jpg";
 
 //Import Breadcrumb
 import Breadcrumbs from "../../Components/Common/Breadcrumb";
+import Image from "next/image";
 
 const images = [img1, img2, img3, img4, img5, img6];
 const imageZoom = [img3, img7];
@@ -131,7 +132,7 @@ const UiLightbox = (props: any) => {
                         <h5 className="mt-0 font-size-14">
                           Fits (Horz/Vert)
                         </h5>
-                        <img
+                        <Image
                           onClick={() => {
                             setisFits(true);
                           }}
@@ -145,7 +146,7 @@ const UiLightbox = (props: any) => {
                     <Col className="col-6">
                       <div>
                         <h5 className="mt-0 font-size-14">Effects</h5>
-                        <img
+                        <Image
                           onClick={() => {
                             setisEffects(true);
                           }}
@@ -176,7 +177,7 @@ const UiLightbox = (props: any) => {
                   </p>
                   <div className="popup-gallery d-flex flex-wrap">
                     <div className="img-fluid float-left">
-                      <img
+                      <Image
                         src={img1}
                         onClick={() => {
                           setisGallery(true);
@@ -187,7 +188,7 @@ const UiLightbox = (props: any) => {
                       />
                     </div>
                     <div className="img-fluid float-left">
-                      <img
+                      <Image
                         src={img2}
                         onClick={() => {
                           setisGallery(true);
@@ -198,7 +199,7 @@ const UiLightbox = (props: any) => {
                       />
                     </div>
                     <div className="img-fluid float-left">
-                      <img
+                      <Image
                         src={img3}
                         onClick={() => {
                           setisGallery(true);
@@ -209,7 +210,7 @@ const UiLightbox = (props: any) => {
                       />
                     </div>
                     <div className="img-fluid float-left">
-                      <img
+                      <Image
                         src={img4}
                         onClick={() => {
                           setisGallery(true);
@@ -220,7 +221,7 @@ const UiLightbox = (props: any) => {
                       />
                     </div>
                     <div className="img-fluid float-left">
-                      <img
+                      <Image
                         src={img5}
                         onClick={() => {
                           setisGallery(true);
@@ -231,7 +232,7 @@ const UiLightbox = (props: any) => {
                       />
                     </div>
                     <div className="img-fluid float-left">
-                      <img
+                      <Image
                         src={img6}
                         onClick={() => {
                           setisGallery(true);
@@ -257,7 +258,7 @@ const UiLightbox = (props: any) => {
                   </p>
 
                   <div className="zoom-gallery">
-                    <img
+                    <Image
                       src={img3}
                       className="float-left"
                       onClick={() => {
@@ -267,7 +268,7 @@ const UiLightbox = (props: any) => {
                       alt=""
                       width="275"
                     />
-                    <img
+                    <Image
                       src={img7}
                       className="float-left"
                       onClick={() => {

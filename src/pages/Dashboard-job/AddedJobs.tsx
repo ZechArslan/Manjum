@@ -1,11 +1,12 @@
 import React from 'react';
 import { DropdownItem, DropdownMenu, DropdownToggle, UncontrolledDropdown } from 'reactstrap';
 import { Link } from 'react-router-dom';
-import { recentAddedJobsData } from 'common/data';
+import { recentAddedJobsData } from '../../common/data';
 import { RecentJobsData } from './type';
 
 // Scrollbar
 import SimpleBar from "simplebar-react";
+import Image from 'next/image';
 
 const AddedJobs: React.FC = () => {
 
@@ -19,7 +20,7 @@ const AddedJobs: React.FC = () => {
                             <div className="vstack gap-4">
                                 {(recentAddedJobsData || [])?.map((job: RecentJobsData, index: number) => (
                                     <div className="d-flex" key={index}>
-                                        <img src={job.logo} alt="" height="40" className="rounded" />
+                                        <Image src={job.logo} alt="" height="40" className="rounded" />
                                         <div className="ms-2 flex-grow-1">
                                             <h6 className="mb-1 font-size-15">
                                                 <Link to="/job-details" className="text-body">{job.jobTitle}</Link>

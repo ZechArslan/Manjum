@@ -1,8 +1,9 @@
 import React from "react";
 import { Card, CardBody, CardTitle } from "reactstrap";
 import { Link } from "react-router-dom";
+import Image from "next/image";
 
-const Comments = ({ comments }) => {
+const Comments = ({ comments }:{comments:any}) => {
   return (
     <Card>
       <CardBody>
@@ -11,7 +12,7 @@ const Comments = ({ comments }) => {
           <div className="d-flex mb-4" key={index}>
             <div className="me-3">
               {comment.userImg ? (
-                <img
+                <Image
                   className="media-object rounded-circle avatar-xs"
                   alt=""
                   src={comment.userImg}
@@ -32,7 +33,7 @@ const Comments = ({ comments }) => {
                   <div className="flex-shrink-0 me-3">
                     <div className="avatar-xs">
                       {comment.reply.userImg ? (
-                        <img
+                        <Image
                           className="media-object rounded-circle avatar-xs"
                           alt=""
                           src={comment.userImg}

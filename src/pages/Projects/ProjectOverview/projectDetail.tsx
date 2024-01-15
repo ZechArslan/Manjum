@@ -2,13 +2,14 @@ import React from "react";
 import { get } from "lodash";
 import { Card, CardBody, Col, Row } from "reactstrap";
 import img1 from "../../../assets/images/companies/img-1.png";
+import Image from "next/image";
 
-const ProjectDetail = ({ project }) => {
+const ProjectDetail = ({ project }:{project:any}) => {
   return (
     <Card>
       <CardBody>
         <div className="d-flex">
-          <img src={img1} alt="" className="avatar-sm me-4" />
+          <Image src={img1} alt="" className="avatar-sm me-4" />
 
           <div className="flex-grow-1 overflow-hidden">
             <h5 className="text-truncate font-size-15">Skote Dashboard UI</h5>

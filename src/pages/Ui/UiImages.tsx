@@ -19,6 +19,7 @@ import avatar5 from "../../assets/images/users/avatar-5.jpg";
 
 //Import Breadcrumb
 import Breadcrumbs from "../../Components/Common/Breadcrumb";
+import Image from "next/image";
 
 const UiImages = () => {
 
@@ -41,11 +42,11 @@ const UiImages = () => {
 
                   <Row>
                     <Col md={6}>
-                      <img className="rounded me-2" alt="200x200" width="200" src={img4} data-holder-rendered="true" />
+                      <Image className="rounded me-2" alt="200x200" width="200" src={img4} data-holder-rendered="true" />
                     </Col>
                     <Col md={6}>
                       <div className="mt-4 mt-md-0">
-                        <img className="rounded-circle avatar-xl" alt="200x200" src={avatar4} data-holder-rendered="true" />
+                        <Image className="rounded-circle avatar-xl" alt="200x200" src={avatar4} data-holder-rendered="true" />
                       </div>
                     </Col>
                   </Row>
@@ -60,11 +61,11 @@ const UiImages = () => {
 
                   <Row>
                     <Col md={6}>
-                      <img className="img-thumbnail" alt="200x200" width="200" src={img3} data-holder-rendered="true" />
+                      <Image className="img-thumbnail" alt="200x200" width="200" src={img3} data-holder-rendered="true" />
                     </Col>
                     <Col md={6}>
                       <div className="mt-4 mt-md-0">
-                        <img className="img-thumbnail rounded-circle avatar-xl" alt="200x200" src={avatar3} data-holder-rendered="true" />
+                        <Image className="img-thumbnail rounded-circle avatar-xl" alt="200x200" src={avatar3} data-holder-rendered="true" />
                       </div>
                     </Col>
                   </Row>
@@ -83,7 +84,7 @@ const UiImages = () => {
                     the image so that it scales with the parent element.</p>
 
                   <div className="">
-                    <img src={img2} className="img-fluid" alt="Responsive img" />
+                    <Image src={img2} className="img-fluid" alt="Responsive img" />
                   </div>
                 </CardBody>
               </Card>
@@ -100,19 +101,19 @@ const UiImages = () => {
                       <Row>
                         <Col lg={4}>
                           <div>
-                            <img src={avatar3} alt="" className="rounded avatar-sm" />
+                            <Image src={avatar3} alt="" className="rounded avatar-sm" />
                             <p className="mt-2 mb-lg-0"><code>.avatar-sm</code></p>
                           </div>
                         </Col>
                         <Col lg={4}>
                           <div>
-                            <img src={avatar4} alt="" className="rounded avatar-md" />
+                            <Image src={avatar4} alt="" className="rounded avatar-md" />
                             <p className="mt-2  mb-lg-0"><code>.avatar-md</code></p>
                           </div>
                         </Col>
                         <Col lg={4}>
                           <div>
-                            <img src={avatar5} alt="" className="rounded avatar-lg" />
+                            <Image src={avatar5} alt="" className="rounded avatar-lg" />
                             <p className="mt-2 mb-lg-0"><code>.avatar-lg</code></p>
                           </div>
                         </Col>
@@ -122,19 +123,19 @@ const UiImages = () => {
                       <Row>
                         <Col lg={4}>
                           <div>
-                            <img src={avatar3} alt="" className="rounded-circle avatar-sm" />
+                            <Image src={avatar3} alt="" className="rounded-circle avatar-sm" />
                             <p className="mt-2 mb-lg-0"><code>.avatar-sm</code></p>
                           </div>
                         </Col>
                         <Col lg={4}>
                           <div>
-                            <img src={avatar4} alt="" className="rounded-circle avatar-md" />
+                            <Image src={avatar4} alt="" className="rounded-circle avatar-md" />
                             <p className="mt-2  mb-lg-0"><code>.avatar-md</code></p>
                           </div>
                         </Col>
                         <Col lg={4}>
                           <div>
-                            <img src={avatar5} alt="" className="rounded-circle avatar-lg" />
+                            <Image src={avatar5} alt="" className="rounded-circle avatar-lg" />
                             <p className="mt-2 mb-lg-0"><code>.avatar-lg</code></p>
                           </div>
                         </Col>
@@ -157,7 +158,7 @@ const UiImages = () => {
 
                   <div className="d-flex">
                     <div className="flex-shrink-0 me-3">
-                      <img className="rounded avatar-sm" src={avatar3} alt="Generic placeholder img" />
+                      <Image className="rounded avatar-sm" src={avatar3} alt="Generic placeholder img" />
                     </div>
                     <div className="flex-grow-1">
                       <h5>Top-aligned media</h5>
@@ -168,7 +169,7 @@ const UiImages = () => {
                   <hr />
                   <div className="d-flex align-items-center">
                     <div className="flex-shrink-0 me-3">
-                      <img className="rounded avatar-sm" src={avatar5} alt="Generic placeholder img" />
+                      <Image className="rounded avatar-sm" src={avatar5} alt="Generic placeholder img" />
                     </div>
                     <div className="flex-grow-1">
                       <h5>Center-aligned media</h5>
@@ -180,7 +181,7 @@ const UiImages = () => {
 
                   <div className="d-flex align-items-end">
                     <div className="flex-shrink-0 me-3">
-                      <img className="rounded avatar-sm" src={avatar1} alt="Generic placeholder img" />
+                      <Image className="rounded avatar-sm" src={avatar1} alt="Generic placeholder img" />
                     </div>
                     <div className="flex-grow-1">
                       <h5>Bottom-aligned media</h5>

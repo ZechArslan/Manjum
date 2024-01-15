@@ -1,31 +1,32 @@
-import React, { useEffect } from "react"
-import { Row, Col, Card, CardBody, CardTitle } from "reactstrap"
-import { Link } from "react-router-dom"
-import ReactApexChart from "react-apexcharts"
-
+import React, { useEffect } from "react";
+import { Row, Col, Card, CardBody, CardTitle } from "reactstrap";
+import { Link } from "react-router-dom";
+import dynamic from "next/dynamic";
+const ReactApexChart = dynamic(() => import("react-apexcharts").then((mod) => mod.default), {
+  ssr: false
+});
 import getChartColorsArray from "../../Components/Common/ChartDynamicColor";
-import { getWalletBalance as onGetWalletBalance } from "slices/thunk";
+import { getWalletBalance as onGetWalletBalance } from "../../slices/thunk";
 import { useDispatch, useSelector } from "react-redux";
 import { createSelector } from "reselect";
 import { DashboardCryptoData, WalletOptions } from "./type";
 
 interface chartState {
   dashboard: {
-    dashboardCrypto: DashboardCryptoData[]
-  }
+    dashboardCrypto: DashboardCryptoData[];
+  };
 }
 
 const WalletBalance = ({ dataColors }: any) => {
-
   const walletBalanceChartColors = getChartColorsArray(dataColors);
-  const dispatch = useDispatch<any>()
+  const dispatch = useDispatch<any>();
 
   const selectChart = createSelector(
     (state: chartState) => state.dashboard,
     (dashboard) => ({
-      dashboardCrypto: dashboard.dashboardCrypto
+      dashboardCrypto: dashboard.dashboardCrypto,
     })
-  )
+  );
 
   const { dashboardCrypto }: any = useSelector(selectChart);
   const cryptoChartData: DashboardCryptoData = dashboardCrypto[0];
@@ -39,13 +40,12 @@ const WalletBalance = ({ dataColors }: any) => {
   const litecoin = cryptoChartData?.Litecoin;
 
   useEffect(() => {
-    dispatch(onGetWalletBalance("1"))
-  }, [dispatch])
-
+    dispatch(onGetWalletBalance("1"));
+  }, [dispatch]);
 
   const handleChangesearies = (ele: any) => {
-    dispatch(onGetWalletBalance(ele.value))
-  }
+    dispatch(onGetWalletBalance(ele.value));
+  };
 
   const walletOptions: WalletOptions | any = {
     plotOptions: {
@@ -87,7 +87,7 @@ const WalletBalance = ({ dataColors }: any) => {
             fontSize: "14px",
             offsetY: 4,
             formatter: function (e: any) {
-              return e + "%"
+              return e + "%";
             },
           },
           total: {
@@ -100,9 +100,9 @@ const WalletBalance = ({ dataColors }: any) => {
             formatter: function (e: any) {
               return (
                 e.globals.seriesTotals.reduce(function (e: any, t: any) {
-                  return e + t
+                  return e + t;
                 }, 0) + "%"
-              )
+              );
             },
           },
         },
@@ -114,7 +114,7 @@ const WalletBalance = ({ dataColors }: any) => {
     colors: walletBalanceChartColors,
     labels: ["Ethereum", "Bitcoin", "Ethereum"],
     legend: { show: !1 },
-  }
+  };
 
   return (
     <React.Fragment>
@@ -122,14 +122,20 @@ const WalletBalance = ({ dataColors }: any) => {
         <Card>
           <CardBody>
             <div className="float-end">
-              <select defaultValue="MA" className="form-select form-select-sm ms-2" onChange={(e: any) => handleChangesearies(e.target)}>
+              <select
+                defaultValue="MA"
+                className="form-select form-select-sm ms-2"
+                onChange={(e: any) => handleChangesearies(e.target)}
+              >
                 <option value="1">March</option>
                 <option value="2">February</option>
                 <option value="3">January</option>
                 <option value="4">December</option>
               </select>
             </div>
-            <CardTitle tag="h4" className="mb-3">Wallet Balance</CardTitle>
+            <CardTitle tag="h4" className="mb-3">
+              Wallet Balance
+            </CardTitle>
 
             <Row>
               <Col lg={4}>
@@ -138,7 +144,8 @@ const WalletBalance = ({ dataColors }: any) => {
                   <h4>$ {availablebalance}</h4>
 
                   <p className="text-muted mb-4">
-                    + 0.0012.23 ( 0.2 % ) <i className="mdi mdi-arrow-up ms-1 text-success" />
+                    + 0.0012.23 ( 0.2 % ){" "}
+                    <i className="mdi mdi-arrow-up ms-1 text-success" />
                   </p>
 
                   <Row>
@@ -167,7 +174,15 @@ const WalletBalance = ({ dataColors }: any) => {
               <Col lg={4} sm={6}>
                 <div>
                   <div id="wallet-balance-chart">
-                    <ReactApexChart options={walletOptions} series={series} type="radialBar" height={300} className="apex-charts" />
+                    {typeof window !== "undefined" && (
+                      <ReactApexChart
+                        options={walletOptions}
+                        series={series}
+                        type="radialBar"
+                        height={300}
+                        className="apex-charts"
+                      />
+                    )}
                   </div>
                 </div>
               </Col>
@@ -175,31 +190,40 @@ const WalletBalance = ({ dataColors }: any) => {
               <Col lg={4} sm={6} className="align-self-center">
                 <div>
                   <p className="mb-2">
-                    <i className="mdi mdi-circle align-middle font-size-10 me-2 text-primary" /> Ethereum
+                    <i className="mdi mdi-circle align-middle font-size-10 me-2 text-primary" />{" "}
+                    Ethereum
                   </p>
                   <h5>
-                    {ethereum ? ethereum['ETH'] : ''} ETH =
-                    <span className="text-muted font-size-14">$ {ethereum ? ethereum['Dollar'] : ''}</span>
+                    {ethereum ? ethereum["ETH"] : ""} ETH =
+                    <span className="text-muted font-size-14">
+                      $ {ethereum ? ethereum["Dollar"] : ""}
+                    </span>
                   </h5>
                 </div>
 
                 <div className="mt-4 pt-2">
                   <p className="mb-2">
-                    <i className="mdi mdi-circle align-middle font-size-10 me-2 text-warning" /> Bitcoin
+                    <i className="mdi mdi-circle align-middle font-size-10 me-2 text-warning" />{" "}
+                    Bitcoin
                   </p>
                   <h5>
-                    {bitcoin ? bitcoin['BTC'] : ''} BTC =
-                    <span className="text-muted font-size-14">$ {bitcoin ? bitcoin['Dollar'] : ''}</span>
+                    {bitcoin ? bitcoin["BTC"] : ""} BTC =
+                    <span className="text-muted font-size-14">
+                      $ {bitcoin ? bitcoin["Dollar"] : ""}
+                    </span>
                   </h5>
                 </div>
 
                 <div className="mt-4 pt-2">
                   <p className="mb-2">
-                    <i className="mdi mdi-circle align-middle font-size-10 me-2 text-info" /> Litecoin
+                    <i className="mdi mdi-circle align-middle font-size-10 me-2 text-info" />{" "}
+                    Litecoin
                   </p>
                   <h5>
-                    {litecoin ? litecoin['LTC'] : ''} LTC =
-                    <span className="text-muted font-size-14">$ {litecoin ? litecoin['Dollar'] : ''}</span>
+                    {litecoin ? litecoin["LTC"] : ""} LTC =
+                    <span className="text-muted font-size-14">
+                      $ {litecoin ? litecoin["Dollar"] : ""}
+                    </span>
                   </h5>
                 </div>
               </Col>
@@ -208,7 +232,7 @@ const WalletBalance = ({ dataColors }: any) => {
         </Card>
       </Col>
     </React.Fragment>
-  )
-}
+  );
+};
 
 export default WalletBalance;

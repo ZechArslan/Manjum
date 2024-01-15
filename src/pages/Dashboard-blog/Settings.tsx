@@ -4,6 +4,7 @@ import { Card, CardBody, Col, UncontrolledDropdown, DropdownMenu, DropdownToggle
 
 // Image
 import avatar from "../../assets/images/users/avatar-1.jpg"
+import Image from "next/image"
 
 const Settings: React.FC = () => {
 
@@ -14,7 +15,7 @@ const Settings: React.FC = () => {
           <CardBody>
             <div className="d-flex">
               <div className="flex-shrink-0 me-3">
-                <img src={avatar} alt="" className="avatar-sm rounded-circle img-thumbnail" />
+                <Image src={avatar} alt="" className="avatar-sm rounded-circle img-thumbnail" />
               </div>
               <div className="flex-grow-1">
                 <div className="d-flex">

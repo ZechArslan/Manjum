@@ -3,6 +3,7 @@ import { Row, Col } from "reactstrap"
 
 //Import Images
 import logolight from "../../../../assets/images/logo-light.png"
+import Image from "next/image"
 
 const FooterLink = () => {
   return (
@@ -10,7 +11,7 @@ const FooterLink = () => {
       <Row>
         <Col lg="6">
           <div className="mb-4">
-            <img src={logolight} alt="" height="20" />
+            <Image src={logolight} alt="" height="20" />
           </div>
 
           <p className="mb-2">

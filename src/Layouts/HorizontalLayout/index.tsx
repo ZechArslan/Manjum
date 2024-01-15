@@ -2,11 +2,11 @@ import React, { useState, useEffect } from "react";
 import Header from "./Header";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import RightSidebar from "Components/CommonForBoth/RightSidebar";
+import RightSidebar from "../../Components/CommonForBoth/RightSidebar";
 import { createSelector } from 'reselect';
 import withRouter from "../../Components/Common/withRouter";
 import { useDispatch, useSelector } from "react-redux";
-import { changeLayout, changeLayoutMode, changeTopbarTheme } from "slices/layouts/thunk";
+import { changeLayout, changeLayoutMode, changeTopbarTheme } from "../../slices/layouts/thunk";
 
 const HorizontalLayout = (props: any) => {
   const dispatch: any = useDispatch();

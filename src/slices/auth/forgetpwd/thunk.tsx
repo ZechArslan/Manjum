@@ -10,7 +10,7 @@ import {
 
 const fireBaseBackend = getFirebaseBackend();
 
-export const userForgetPassword = (user, history) => async (dispatch) => {
+export const userForgetPassword = (user:any, history:any) => async (dispatch:any) => {
   try {
       let response;
       if (process.env.REACT_APP_DEFAULTAUTH === "firebase") {

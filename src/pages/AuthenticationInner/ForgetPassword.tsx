@@ -10,6 +10,7 @@ import { useFormik } from "formik";
 // import images
 import profile from "../../assets/images/profile-img.png";
 import logo from "../../assets/images/logo.svg";
+import Image from "next/image";
 
 const ForgetPasswordPage = () => {
   const validation : any = useFormik({
@@ -47,7 +48,7 @@ const ForgetPasswordPage = () => {
                       </div>
                     </Col>
                     <Col className="col-5 align-self-end">
-                      <img src={profile} alt="" className="img-fluid" />
+                      <Image src={profile} alt="" className="img-fluid" />
                     </Col>
                   </Row>
                 </div>
@@ -56,7 +57,7 @@ const ForgetPasswordPage = () => {
                     <Link to="/">
                       <div className="avatar-md profile-user-wid mb-4">
                         <span className="avatar-title rounded-circle bg-light">
-                          <img
+                          <Image
                             src={logo}
                             alt=""
                             className="rounded-circle"

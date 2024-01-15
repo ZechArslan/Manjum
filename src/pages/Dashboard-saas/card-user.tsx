@@ -3,6 +3,7 @@ import { Row, Col, Card, CardBody, Dropdown, DropdownToggle, DropdownMenu, Dropd
 
 //Import Images
 import avatar1 from "../../assets/images/users/avatar-1.jpg"
+import Image from "next/image"
 
 const CardUser: React.FC = () => {
 
@@ -19,7 +20,7 @@ const CardUser: React.FC = () => {
                   <div className="d-flex">
 
                     <div className="flex-shrink-0 me-3">
-                      <img src={avatar1} alt="" className="avatar-md rounded-circle img-thumbnail" />
+                      <Image src={avatar1} alt="" className="avatar-md rounded-circle img-thumbnail" />
                     </div>
 
                     <div className="flex-grow-1 align-self-center">

@@ -41,7 +41,7 @@ class FirebaseAuthBackend {
   /**
    * Registers the user with given details
    */
-  editProfileAPI = (username, idx) => {
+  editProfileAPI = (username:any, idx:any) => {
     return new Promise((resolve, reject) => {
       const currentUser = firebase.auth().currentUser;
       if (currentUser) {
@@ -52,7 +52,7 @@ class FirebaseAuthBackend {
           .then(() => {
             resolve(currentUser);
           })
-          .catch((error) => {
+          .catch((error:any) => {
             reject(error);
           });
       } else {

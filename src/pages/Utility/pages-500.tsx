@@ -4,6 +4,7 @@ import { Container, Row, Col } from "reactstrap"
 
 //Import Images
 import error from "../../assets/images/error-img.png"
+import Image from "next/image"
 
 const Pages500 = () => {
    //meta title
@@ -35,7 +36,7 @@ const Pages500 = () => {
           <Row className="justify-content-center">
             <Col md="8" xl="6">
               <div>
-                <img src={error} alt="" className="img-fluid" />
+                <Image src={error} alt="" className="img-fluid" />
               </div>
             </Col>
           </Row>

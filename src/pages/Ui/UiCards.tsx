@@ -29,6 +29,7 @@ import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
 
 //Import Breadcrumb
 import Breadcrumbs from "../../Components/Common/Breadcrumb";
+import Image from "next/image";
 
 const UiCards = () => {
 
@@ -590,7 +591,7 @@ const UiCards = () => {
                   >
 
                     <Card>
-                      <img src={img3} className="card-img-top" alt="..." />
+                      <Image src={img3} className="card-img-top" alt="..." />
                       <CardBody>
                         <h5 className="card-title">Card title that wraps to a new line</h5>
                         <p className="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
@@ -600,7 +601,7 @@ const UiCards = () => {
 
 
                     <Card>
-                      <img src={img5} className="card-img-top" alt="..." />
+                      <Image src={img5} className="card-img-top" alt="..." />
                       <CardBody>
                         <h5 className="card-title">Card title</h5>
                         <p className="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
@@ -611,7 +612,7 @@ const UiCards = () => {
 
 
                     <Card>
-                      <img src={img7} className="card-img-top" alt="..." />
+                      <Image src={img7} className="card-img-top" alt="..." />
                     </Card>
 
 

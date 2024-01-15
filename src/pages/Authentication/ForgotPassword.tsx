@@ -5,7 +5,7 @@ import { Row, Col, Alert, Card, CardBody, Container, FormFeedback, Input, Label,
 import { useSelector, useDispatch } from "react-redux";
 
 import { Link } from "react-router-dom";
-import withRouter from "Components/Common/withRouter";
+import withRouter from "../../Components/Common/withRouter";
 
 // Formik Validation
 import * as Yup from "yup";
@@ -18,8 +18,9 @@ import { userForgetPassword } from "../../slices/thunk";
 import profile from "../../assets/images/profile-img.png";
 import logo from "../../assets/images/logo.svg";
 import { createSelector } from 'reselect';
+import Image from "next/image";
 
-const ForgetPasswordPage = (props) => {
+const ForgetPasswordPage = (props:any) => {
 
     //meta title
     document.title = "Forget Password | Skote - React Admin & Dashboard Template";
@@ -72,7 +73,7 @@ const ForgetPasswordPage = (props) => {
                                             </div>
                                         </Col>
                                         <Col className="col-5 align-self-end">
-                                            <img src={profile} alt="" className="img-fluid" />
+                                            <Image src={profile} alt="" className="img-fluid" />
                                         </Col>
                                     </Row>
                                 </div>
@@ -81,7 +82,7 @@ const ForgetPasswordPage = (props) => {
                                         <Link to="/">
                                             <div className="avatar-md profile-user-wid mb-4">
                                                 <span className="avatar-title rounded-circle bg-light">
-                                                    <img
+                                                    <Image
                                                         src={logo}
                                                         alt=""
                                                         className="rounded-circle"

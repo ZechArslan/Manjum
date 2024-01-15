@@ -11,6 +11,7 @@ import profileImg from "../../assets/images/profile-img.png";
 import logoImg from "../../assets/images/logo.svg";
 import avatar from "../../assets/images/users/avatar-1.jpg";
 import { Link } from "react-router-dom";
+import Image from "next/image";
 
 const LockScreen = () => {
 
@@ -47,7 +48,7 @@ const LockScreen = () => {
                       </div>
                     </Col>
                     <Col xs="5" className="align-self-end">
-                      <img src={profileImg} alt="" className="img-fluid" />
+                      <Image src={profileImg} alt="" className="img-fluid" />
                     </Col>
                   </Row>
                 </div>
@@ -56,7 +57,7 @@ const LockScreen = () => {
                     <Link to="/">
                       <div className="avatar-md profile-user-wid mb-4">
                         <span className="avatar-title rounded-circle bg-light">
-                          <img
+                          <Image
                             src={logoImg}
                             alt=""
                             className="rounded-circle"
@@ -75,7 +76,7 @@ const LockScreen = () => {
                       }}
                     >
                       <div className="user-thumb text-center mb-4">
-                        <img
+                        <Image
                           src={avatar}
                           className="rounded-circle img-thumbnail avatar-md"
                           alt="thumbnail"

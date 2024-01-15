@@ -12,6 +12,7 @@ import { createSelector } from 'reselect';
 import user1 from "../../../assets/images/users/avatar-1.jpg";
 
 import { useSelector } from "react-redux";
+import Image from "next/image";
 
 const ProfileMenu = (props: any) => {
   // Declare a new state variable, which we'll call "menu"
@@ -55,7 +56,7 @@ const ProfileMenu = (props: any) => {
           id="page-header-user-dropdown"
           tag="button"
         >
-          <img
+          <Image
             className="rounded-circle header-profile-user"
             src={user1}
             alt="Header Avatar"

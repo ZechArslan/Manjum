@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import avatar2 from "../../../assets/images/users/avatar-2.jpg";
 import avatar4 from "../../../assets/images/users/avatar-4.jpg";
 import avatar5 from "../../../assets/images/users/avatar-5.jpg";
+import Image from "next/image";
 
 const Reviews: React.FC = () => {
   return (
@@ -13,7 +14,7 @@ const Reviews: React.FC = () => {
 
       <div className="d-flex py-3 border-bottom">
         <div className="flex-shrink-0 me-3">
-          <img src={avatar2} className="avatar-xs rounded-circle" alt=" img" />
+          <Image src={avatar2} className="avatar-xs rounded-circle" alt=" img" />
         </div>
 
         <div className="flex-grow-1">
@@ -32,7 +33,7 @@ const Reviews: React.FC = () => {
       </div>
       <div className="d-flex py-3 border-bottom">
         <div className="flex-shrink-0 me-3">
-          <img src={avatar4} className="avatar-xs rounded-circle" alt=" img" />
+          <Image src={avatar4} className="avatar-xs rounded-circle" alt=" img" />
         </div>
 
         <div className="flex-grow-1">
@@ -49,7 +50,7 @@ const Reviews: React.FC = () => {
           <div className="text-muted font-size-12"><i className="far fa-calendar-alt text-primary me-1"></i> 07 Oct, 2019</div>
           <div className="d-flex mt-4">
             <div className="flex-shrink-0 me-2">
-              <img src={avatar5} className="avatar-xs me-3 rounded-circle" alt=" img" />
+              <Image src={avatar5} className="avatar-xs me-3 rounded-circle" alt=" img" />
             </div>
 
             <div className="flex-grow-1">

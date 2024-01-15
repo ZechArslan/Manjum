@@ -5,12 +5,13 @@ import { Message } from "./type";
 import EmojiPicker from "emoji-picker-react";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import Spinners from "Components/Common/Spinner";
+import Spinners from "../../Components/Common/Spinner";
 
 import {
     addMessage as onAddMessage,
     deleteMessage as onDeleteMessage
 } from "../../slices/chats/thunk"
+import Image from "next/image";
 
 
 interface Props {
@@ -249,7 +250,7 @@ const UserChat: React.FC<Props> = ({ Chat_Box_Username, Chat_Box_User_Status, me
                                                                                     {userMsg.to_id === 1 ? message.sender : "You"}
                                                                                 </div>
                                                                                 <p>{userMsg.msg}</p>
-                                                                                {userMsg.images && <img src={userMsg.images} alt="" width="150px" />}
+                                                                                {userMsg.images && <Image src={userMsg.images} alt="" width="150" />}
                                                                                 {userMsg.time !== 0 && <p className="chat-time mb-0"><i className="bx bx-time-five align-middle me-1"></i>{userMsg.time}</p>}
                                                                             </div>
                                                                         </div>
@@ -269,7 +270,7 @@ const UserChat: React.FC<Props> = ({ Chat_Box_Username, Chat_Box_User_Status, me
                             selectedImage &&
                             <div className="replymessage-block mb-0 d-flex align-items-start">
                                 <div className="flex-grow-1">
-                                    <img src={selectedImage} alt="select img" style={{ width: "150px", height: "auto" }} />
+                                    <Image src={selectedImage} alt="select img" style={{ width: "150px", height: "auto" }} />
                                 </div>
                                 <div className="flex-shrink-0">
                                     <button type="button" id="close_toggle" className="btn btn-sm btn-link mt-n2 me-n3 fs-18" onClick={() => setSelectedImage(null)}>

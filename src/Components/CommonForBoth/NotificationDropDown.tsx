@@ -9,6 +9,7 @@ import avatar4 from "../../assets/images/users/avatar-4.jpg";
 
 //i18n
 import { withTranslation } from "react-i18next";
+import Image from "next/image";
 
 const NotificationDropdown = (props: any) => {
   // Declare a new state variable, which we'll call "menu"
@@ -72,7 +73,7 @@ const NotificationDropdown = (props: any) => {
             </Link>
             <Link to="" className="text-reset notification-item">
               <div className="d-flex">
-                <img
+                <Image
                   src={avatar3}
                   className="me-3 rounded-circle avatar-xs"
                   alt="user-pic"
@@ -117,7 +118,7 @@ const NotificationDropdown = (props: any) => {
 
             <Link to="" className="text-reset notification-item">
               <div className="d-flex">
-                <img
+                <Image
                   src={avatar4}
                   className="me-3 rounded-circle avatar-xs"
                   alt="user-pic"

@@ -3,6 +3,7 @@ import { Card, CardBody, Col } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import { jobVacancy } from "../../common/data";
 import { jobVacancyType } from './type';
+import Image from 'next/image';
 
 const JobVacancy: React.FC = () => {
 
@@ -21,7 +22,7 @@ const JobVacancy: React.FC = () => {
                     <Card>
                         <CardBody className="p-4">
                             <div className="text-center mb-3">
-                                <img src={item.img} alt="" className="avatar-sm" />
+                                <Image src={item.img} alt="" className="avatar-sm" />
                                 <Link to="/job-details" className="text-body">
                                     <h5 className="mt-4 mb-2 font-size-15">{item.title}</h5>
                                 </Link>

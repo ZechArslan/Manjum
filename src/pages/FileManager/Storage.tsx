@@ -1,7 +1,11 @@
 import React from "react"
 import { Link } from "react-router-dom"
 import { Card, CardBody } from "reactstrap"
-import ReactApexChart from "react-apexcharts"
+// import ReactApexChart from "react-apexcharts"
+import dynamic from "next/dynamic";
+const ReactApexChart = dynamic(() => import("react-apexcharts").then((mod) => mod.default), {
+  ssr: false
+});
 
 const Storage = (props: any) => {
   const { options, series } = props;

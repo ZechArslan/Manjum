@@ -5,7 +5,7 @@ import { Badge, Button, Card, CardBody, CardTitle, } from "reactstrap";
 import EcommerenceOrdersModal from "../Ecommerce/EcommerceOrders/EcommerceOrdersModal";
 
 import TableContainer from "../../Components/Common/TableContainer";
-import { getTransaction as onGetTransaction } from "slices/thunk";
+import { getTransaction as onGetTransaction } from "../../slices/thunk";
 import { useDispatch, useSelector } from "react-redux";
 import { createSelector } from 'reselect';
 import { LatestTransactions } from "./type";

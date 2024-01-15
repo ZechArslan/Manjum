@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Card, CardBody, Col, Row } from 'reactstrap';
@@ -29,7 +30,7 @@ const List = ({ candidateDate }: any) => {
                                     </button>
                                 </div>
                                 <div className="text-center mb-3">
-                                    <img src={item.img} alt="" className="avatar-sm rounded-circle" />
+                                    <Image src={item.img} alt="" className="avatar-sm rounded-circle" />
                                     <h6 className="font-size-15 mt-3 mb-1">{item.name}</h6>
                                     <p className="mb-0 text-muted">{item.designation}</p>
                                 </div>

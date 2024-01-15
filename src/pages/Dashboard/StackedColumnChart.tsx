@@ -1,5 +1,8 @@
 import React from "react"
-import ReactApexChart from "react-apexcharts"
+import dynamic from "next/dynamic";
+const ReactApexChart = dynamic(() => import("react-apexcharts").then((mod) => mod.default), {
+  ssr: false
+});
 import getChartColorsArray from "../../Components/Common/ChartDynamicColor";
 
 const StackedColumnChart = ({ dataColors, periodData }: any) => {
@@ -40,6 +43,7 @@ const StackedColumnChart = ({ dataColors, periodData }: any) => {
     }
   }
   return (
+    (typeof window !== 'undefined') &&
     <React.Fragment>
       <ReactApexChart
         options={options}

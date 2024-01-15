@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import SimpleBar from "simplebar-react";
 import classnames from "classnames";
 import { RecentChat, Contact, Group } from "./type";
-import Spinners from "Components/Common/Spinner";
+import Spinners from "../../Components/Common/Spinner";
 
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
@@ -18,6 +18,7 @@ import {
 
 // IMage
 import avatar1 from "../../assets/images/users/avatar-1.jpg";
+import Image from "next/image";
 
 interface Props {
     userChatOpen: (chats: RecentChat) => void;
@@ -98,7 +99,7 @@ const ChatList: React.FC<Props> = ({ userChatOpen, currentRoomId }) => {
                     <div className="py-4 border-bottom">
                         <div className="d-flex">
                             <div className="align-self-center me-3">
-                                <img src={avatar1} className="avatar-xs rounded-circle" alt="" />
+                                <Image src={avatar1} className="avatar-xs rounded-circle" alt="" />
                             </div>
                             <div className="flex-grow-1">
                                 <h5 className="font-size-15 mt-0 mb-1"> {currentUser.name}</h5>
@@ -172,7 +173,7 @@ const ChatList: React.FC<Props> = ({ userChatOpen, currentRoomId }) => {
                                                                     </div>
                                                                         :
                                                                         <div className="align-self-center me-3">
-                                                                            <img src={chat.image} className="rounded-circle avatar-xs" alt="" />
+                                                                            <Image src={chat.image ?? ""} className="rounded-circle avatar-xs" alt="" />
                                                                         </div>
                                                                     }
 

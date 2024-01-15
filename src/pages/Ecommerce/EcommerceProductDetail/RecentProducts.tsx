@@ -3,6 +3,7 @@ import { Card, CardBody, Col, Row } from "reactstrap"
 import { Link } from "react-router-dom"
 import StarRatings from "react-star-ratings"
 import { RecentProducts } from "../type"
+import Image from "next/image"
 
 const RecentProduct = ({ productDetail }: any) => {
 
@@ -18,7 +19,7 @@ const RecentProduct = ({ productDetail }: any) => {
                   <CardBody>
                     <Row className="align-items-center">
                       <Col md="4">
-                        <img src={product.img} alt="" className="img-fluid mx-auto d-block" />
+                        <Image src={product.img} alt="" className="img-fluid mx-auto d-block" />
                       </Col>
                       <Col md="8">
                         <div className="text-center text-md-start pt-3 pt-md-0">

@@ -13,6 +13,7 @@ import moment from "moment";
 import SimpleBar from "simplebar-react";
 import { Link } from "react-router-dom";
 import { projectAssignedTo } from "../../common/data";
+import Image from "next/image";
 
 const ProjectsCreate = () => {
 
@@ -138,7 +139,7 @@ const ProjectsCreate = () => {
                           </div>
                           <div className="avatar-lg">
                             <div className="avatar-title bg-light rounded-circle">
-                              <img src={selectedImage || ''} id="projectlogo-img" alt="" className="avatar-md h-auto rounded-circle" />
+                              <Image src={selectedImage || ''} id="projectlogo-img" alt="" className="avatar-md h-auto rounded-circle" />
                             </div>
                           </div>
                         </div>
@@ -170,7 +171,7 @@ const ProjectsCreate = () => {
                           (imgStore || [])?.map((item: any, idx: number) => (
                             <React.Fragment key={idx}>
                               <Link to="#" className="avatar-group-item mb-2" id={`assignee-member${idx}`}>
-                                <img src={item.imageSrc} alt="" className="rounded-circle avatar-xs" />
+                                <Image src={item.imageSrc} alt="" className="rounded-circle avatar-xs" />
                               </Link>
                               <UncontrolledTooltip placement="top" target={`assignee-member${idx}`}>
                                 {item.name}
@@ -191,7 +192,7 @@ const ProjectsCreate = () => {
                                 (projectAssignedTo || [])?.map((item: any, index: number) => (
                                   <a className={`d-flex align-items-center dropdown-item ${active === item.id ? "active" : ""}`} href="#!" key={index} onClick={() => handleClick(item)}>
                                     <div className="avatar-xs flex-shrink-0 me-2">
-                                      <img src={item.imageSrc} alt="" className="img-fluid rounded-circle" />
+                                      <Image src={item.imageSrc} alt="" className="img-fluid rounded-circle" />
                                     </div>
                                     <div className="flex-grow-1">{item.name}</div>
                                   </a>
@@ -241,7 +242,7 @@ const ProjectsCreate = () => {
                               <div className="d-flex flex-wrap gap-2 p-2">
                                 <div className="flex-shrink-0 me-3">
                                   <div className="avatar-sm bg-light rounded p-2">
-                                    <img data-dz-thumbnail="" className="img-fluid rounded d-block" src={file.priview} alt={file.name} />
+                                    <Image data-dz-thumbnail="" className="img-fluid rounded d-block" src={file.priview} alt={file.name} />
                                   </div>
                                 </div>
                                 <div className="flex-grow-1">

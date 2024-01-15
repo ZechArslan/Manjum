@@ -14,6 +14,7 @@ import { useDispatch } from "react-redux";
 import { getMailsListsId as onGetMailsListsId } from "slices/thunk";
 import { createSelector } from "reselect";
 import { useSelector } from "react-redux";
+import Image from "next/image";
 
 const EmailRead = (props: any) => {
   const id: string = props.router.params.id;
@@ -56,7 +57,7 @@ const EmailRead = (props: any) => {
                 <Card>
                   <CardBody className="list-message">
                     <div className="d-flex mb-4">
-                      <img
+                      <Image
                         className="d-flex me-3 rounded-circle avatar-sm"
                         src={avatar2}
                         alt="skote"

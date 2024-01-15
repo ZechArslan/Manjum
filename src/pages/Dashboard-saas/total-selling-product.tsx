@@ -1,19 +1,30 @@
 import React, { useEffect, useState } from "react";
-import { Col, Card, CardBody, Table, InputGroup, InputGroupText, CardTitle, Badge } from "reactstrap";
-import ReactApexChart from "react-apexcharts";
-
+import {
+  Col,
+  Card,
+  CardBody,
+  Table,
+  InputGroup,
+  InputGroupText,
+  CardTitle,
+  Badge,
+} from "reactstrap";
+import dynamic from "next/dynamic";
+const ReactApexChart = dynamic(() => import("react-apexcharts").then((mod) => mod.default), {
+  ssr: false
+});
 //redux
 import { useSelector, useDispatch } from "react-redux";
 
 //actions
-import { getTopSellingData } from "../../slices/thunk"
+import { getTopSellingData } from "../../slices/thunk";
 import { createSelector } from "reselect";
 import { MonthlyTopSellingData } from "./type";
 
 interface selectTotalSelling {
   dashboard: {
-    dashboardSaas: MonthlyTopSellingData[]
-  }
+    dashboardSaas: MonthlyTopSellingData[];
+  };
 }
 
 const getChartOptions = (index: any) => {
@@ -76,7 +87,11 @@ const TotalSellingProduct = () => {
             <div className="clearfix">
               <div className="float-end">
                 <InputGroup className="input-group-sm">
-                  <select className="form-select form-select-sm" value={selectedMonth} onChange={e => onChangeMonth(e.target.value)}>
+                  <select
+                    className="form-select form-select-sm"
+                    value={selectedMonth}
+                    onChange={(e) => onChangeMonth(e.target.value)}
+                  >
                     <option value="jan">Jan</option>
                     <option value="dec">Dec</option>
                     <option value="nov">Nov</option>
@@ -85,7 +100,9 @@ const TotalSellingProduct = () => {
                   <InputGroupText>Month</InputGroupText>
                 </InputGroup>
               </div>
-              <CardTitle tag="h4" className="mb-4">Top Selling product</CardTitle>
+              <CardTitle tag="h4" className="mb-4">
+                Top Selling product
+              </CardTitle>
             </div>
 
             <div className="text-muted text-center">
@@ -94,7 +111,8 @@ const TotalSellingProduct = () => {
               <p className="mt-4 mb-0">
                 <Badge className="badge-soft-success font-size-11 me-2">
                   0.6% <i className="mdi mdi-arrow-up" />
-                </Badge> From previous period
+                </Badge>{" "}
+                From previous period
               </p>
             </div>
 
@@ -111,7 +129,16 @@ const TotalSellingProduct = () => {
                         </td>
                         <td>
                           <div id="radialchart-1">
-                            <ReactApexChart options={options} series={[data.value]} type="radialBar" height={60} width={60} className="apex-charts" />
+                            {typeof window !== "undefined" && (
+                              <ReactApexChart
+                                options={options}
+                                series={[data.value]}
+                                type="radialBar"
+                                height={60}
+                                width={60}
+                                className="apex-charts"
+                              />
+                            )}
                           </div>
                         </td>
                         <td>

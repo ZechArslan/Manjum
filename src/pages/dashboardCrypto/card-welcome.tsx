@@ -3,6 +3,7 @@ import { Row, Col, Card } from "reactstrap"
 
 //Import Image
 import features from "../../assets/images/crypto/features-img/img-1.png"
+import Image from "next/image"
 
 const CardWelcome: React.FC = () => {
 
@@ -31,7 +32,7 @@ const CardWelcome: React.FC = () => {
             </Col>
             <Col lg={3} sm={4} className="align-self-center">
               <div>
-                <img src={features} alt="" className="img-fluid d-block" />
+                <Image src={features} alt="" className="img-fluid d-block" />
               </div>
             </Col>
           </Row>

@@ -24,6 +24,7 @@ import logoLightSvg from "../../assets/images/logo-light.svg";
 
 //i18n
 import { withTranslation } from "react-i18next";
+import Image from "next/image";
 
 const Header = (props: any) => {
 
@@ -32,7 +33,7 @@ const Header = (props: any) => {
   const [socialDrp, setsocialDrp] = useState(false);
 
   const toggleFullscreen = () => {
-    let document: any = window.document;
+    let document: any = null;
     document.body.classList.add("fullscreen-enable");
     if (
       !document.fullscreenElement &&
@@ -89,13 +90,13 @@ const Header = (props: any) => {
             <div className="navbar-brand-box d-lg-none d-md-block">
               <Link to="/" className="logo logo-dark">
                 <span className="logo-sm">
-                  <img src={logo} alt="" height="22" />
+                  <Image src={logo} alt="" height="22" />
                 </span>
               </Link>
 
               <Link to="/" className="logo logo-light">
                 <span className="logo-sm">
-                  <img src={logoLightSvg} alt="" height="22" />
+                  <Image src={logoLightSvg} alt="" height="22" />
                 </span>
               </Link>
             </div>
@@ -252,7 +253,7 @@ const Header = (props: any) => {
 
                       <Col sm={5}>
                         <div>
-                          <img
+                          <Image
                             src={megamenuImg}
                             alt=""
                             className="img-fluid mx-auto d-block"
@@ -321,19 +322,19 @@ const Header = (props: any) => {
                   <Row className="no-gutters">
                     <Col>
                       <Link className="dropdown-icon-item" to="#">
-                        <img src={github} alt="Github" />
+                        <Image src={github} alt="Github" />
                         <span>GitHub</span>
                       </Link>
                     </Col>
                     <Col>
                       <Link className="dropdown-icon-item" to="#">
-                        <img src={bitbucket} alt="bitbucket" />
+                        <Image src={bitbucket} alt="bitbucket" />
                         <span>Bitbucket</span>
                       </Link>
                     </Col>
                     <Col>
                       <Link className="dropdown-icon-item" to="#">
-                        <img src={dribbble} alt="dribbble" />
+                        <Image src={dribbble} alt="dribbble" />
                         <span>Dribbble</span>
                       </Link>
                     </Col>
@@ -342,19 +343,19 @@ const Header = (props: any) => {
                   <Row className="no-gutters">
                     <Col>
                       <Link className="dropdown-icon-item" to="#">
-                        <img src={dropbox} alt="dropbox" />
+                        <Image src={dropbox} alt="dropbox" />
                         <span>Dropbox</span>
                       </Link>
                     </Col>
                     <Col>
                       <Link className="dropdown-icon-item" to="#">
-                        <img src={mail_chimp} alt="mail_chimp" />
+                        <Image src={mail_chimp} alt="mail_chimp" />
                         <span>Mail Chimp</span>
                       </Link>
                     </Col>
                     <Col>
                       <Link className="dropdown-icon-item" to="#">
-                        <img src={slack} alt="slack" />
+                        <Image src={slack} alt="slack" />
                         <span>Slack</span>
                       </Link>
                     </Col>

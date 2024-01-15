@@ -14,7 +14,8 @@ import i18n from "../../i18n";
 import languages from "../../common/languages";
 
 //img
-import usflag from "assets/images/flags/us.jpg";
+import usflag from "../../assets/images/flags/us.jpg";
+import Image from "next/image";
 
 const LanguageDropdown = () => {
   // Declare a new state variable, which we'll call "menu"
@@ -41,7 +42,7 @@ const LanguageDropdown = () => {
     <React.Fragment>
       <Dropdown isOpen={menu} toggle={toggle} className="d-inline-block language-switch">
         <DropdownToggle className="btn header-item " tag="button">
-          <img
+          <Image
             src={get(languages, `${selectedLang}.flag`) || usflag}
             alt="skote"
             height="16"
@@ -55,8 +56,8 @@ const LanguageDropdown = () => {
               className={`notify-item ${selectedLang === key ? "active" : "none"
                 }`}
             >
-              <img
-                src={get(languages, `${key}.flag`)}
+              <Image
+                src={get(languages, `${key}.flag`) ?? ""}
                 alt="skote"
                 className="me-1"
                 height="12"

@@ -7,6 +7,7 @@ import FeatureBox from "./feature-box";
 //Import images
 import feature1 from "../../../../assets/images/crypto/features-img/img-1.png";
 import feature2 from "../../../../assets/images/crypto/features-img/img-2.png";
+import Image from "next/image";
 
 const Features = () => {
   const features1 = [
@@ -34,7 +35,7 @@ const Features = () => {
           <Row className="align-items-center pt-4">
             <Col md="6" sm="8">
               <div>
-                <img
+                <Image
                   src={feature1}
                   alt=""
                   className="img-fluid mx-auto d-block"
@@ -64,7 +65,7 @@ const Features = () => {
             </Col>
             <Col md="6" sm="8" className="ms-md-auto">
               <div className="mt-4 me-md-0">
-                <img
+                <Image
                   src={feature2}
                   alt=""
                   className="img-fluid mx-auto d-block"

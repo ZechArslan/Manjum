@@ -14,7 +14,7 @@ import { createSelector } from 'reselect';
 
 import { getChartData as onGetChartData } from '../../slices/dashboards/thunk';
 
-import Breadcrumb from 'Components/Common/Breadcrumb';
+import Breadcrumb from '../../Components/Common/Breadcrumb';
 import { DashboardEmailItem, Report } from './type';
 
 interface selectState {
@@ -26,7 +26,7 @@ interface selectState {
 
 const Dashboard = () => {
 
-  document.title = "Dashboards | Skote - React Admin & Dashboard Template";
+  // document.title = "Dashboards | Skote - React Admin & Dashboard Template";
 
   const [subScribeModal, setSubScribeModal] = useState<boolean>(false);
 

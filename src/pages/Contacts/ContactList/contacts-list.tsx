@@ -23,8 +23,9 @@ import {
 }
   from "../../../slices/contacts/thunk"
 import { createSelector } from 'reselect';
-import Spinners from "Components/Common/Spinner";
+import Spinners from "../../../Components/Common/Spinner";
 import { ToastContainer } from "react-toastify";
+import Image from "next/image";
 
 const ContactsList = () => {
 
@@ -134,7 +135,7 @@ const ContactsList = () => {
                 </div>
               ) : (
                 <div>
-                  <img className="rounded-circle avatar-xs" src={cellProps.row.original.img} alt="" />
+                  <Image className="rounded-circle avatar-xs" src={cellProps.row.original.img} alt="" />
                 </div>
               )}
             </>

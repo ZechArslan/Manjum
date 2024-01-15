@@ -2,6 +2,7 @@ import React from "react"
 import { Card, CardBody, CardTitle, Table } from "reactstrap"
 import { Link } from "react-router-dom";
 import { OverviewTeamMember } from "../../../common/data";
+import Image from "next/image";
 
 const TeamMembers = () => {
   return (
@@ -17,7 +18,7 @@ const TeamMembers = () => {
 
                   <td style={{ width: "50px" }}>
                     {item.img ?
-                      <img src={item.img} className="rounded-circle avatar-xs" alt="" />
+                      <Image src={item.img} className="rounded-circle avatar-xs" alt="" />
                       :
                       <div className="avatar-xs">
                         <span className="avatar-title rounded-circle bg-primary text-white font-size-16">

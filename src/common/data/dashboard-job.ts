@@ -11,7 +11,7 @@ import adobe from "../../assets/images/companies/adobe.svg";
 import flutter from "../../assets/images/companies/flutter.svg";
 import spotify from "../../assets/images/companies/spotify.svg";
 import avatar5 from '../../assets/images/users/avatar-5.jpg';
-import { ChartData, FeedDataType, RecentJobsData, StatisticsApplication, jobVacancyType } from "pages/Dashboard-job/type";
+import { ChartData, FeedDataType, RecentJobsData, StatisticsApplication, jobVacancyType } from "../../pages/Dashboard-job/type";
 
 const jobVacancy: jobVacancyType[] = [
     { id: 1, img: airbnb, title: "Project Manager", country: "California", vacancy: 8 },

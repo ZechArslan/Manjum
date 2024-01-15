@@ -1,6 +1,10 @@
 import React from "react";
-import ReactApexChart from "react-apexcharts";
-import "./dashboard.scss";
+import dynamic from "next/dynamic";
+const ReactApexChart = dynamic(() => import("react-apexcharts").then((mod) => mod.default), {
+  ssr: false
+});
+// import "./dashboard.scss";
+
 import getChartColorsArray from "../../Components/Common/ChartDynamicColor";
 
 const ApexRadial = ({ dataColors }: any) => {
@@ -48,7 +52,15 @@ const ApexRadial = ({ dataColors }: any) => {
     labels: ["Series A"],
   };
   return (
-    <ReactApexChart options={options} series={series} type="radialBar" height="200" className="apex-charts" />
+    typeof window !== "undefined" && (
+      <ReactApexChart
+        options={options}
+        series={series}
+        type="radialBar"
+        height="200"
+        className="apex-charts"
+      />
+    )
   );
 };
 

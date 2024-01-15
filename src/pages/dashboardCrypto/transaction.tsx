@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { Col, Card, Nav, CardBody, NavItem, NavLink, TabContent, TabPane, Table } from "reactstrap"
-import { transactionsDataALL, transactionsDataBuy, transactionsDataSell } from "common/data";
+import { transactionsDataALL, transactionsDataBuy, transactionsDataSell } from "../../common/data";
 import classnames from "classnames"
 import { TransactionsType } from "./type";
 

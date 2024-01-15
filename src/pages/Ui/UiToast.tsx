@@ -18,6 +18,7 @@ import Breadcrumbs from "../../Components/Common/Breadcrumb";
 
 //import images
 import logo from "../../assets/images/logo.svg";
+import Image from 'next/image';
 
 const UiToast = () => {
 
@@ -63,7 +64,7 @@ const UiToast = () => {
                                             <div className="position-fixed top-0 end-0 p-3" style={{ zIndex: "1005" }}>
                                                 <Toast isOpen={toast}>
                                                     <ToastHeader toggle={toggleToast}>
-                                                        <img src={logo} alt="" className="me-2" height="18" />
+                                                        <Image src={logo} alt="" className="me-2" height="18" />
                                                         Reactstrap
                                                     </ToastHeader>
                                                     <ToastBody>
@@ -91,7 +92,7 @@ const UiToast = () => {
                                     <div style={{ minHeight: "110px" }}>
                                         <Toast show={toast2} role="alert" onClose={() => setToast2(false)}  >
                                             <ToastHeader tag={React.Fragment} tagClassName="" toggle={() => setToast2(!toast2)}>
-                                                <img src={logo} alt="" className="me-2" height="18" />
+                                                <Image src={logo} alt="" className="me-2" height="18" />
                                                 <strong className="me-auto">Skote</strong>
                                                 <small className="text-muted">11 mins ago</small>
                                             </ToastHeader>
@@ -118,7 +119,7 @@ const UiToast = () => {
                                             role="alert"
                                         >
                                             <ToastHeader tag={React.Fragment} tagClassName="" toggle={() => setToast3(!toast3)}>
-                                                <img src={logo} alt="" className="me-2" height="18" />
+                                                <Image src={logo} alt="" className="me-2" height="18" />
                                                 <strong className="me-auto">Skote</strong>
                                                 <small className="text-muted">11 mins ago</small>
                                             </ToastHeader>
@@ -149,7 +150,7 @@ const UiToast = () => {
                                                     role="alert"
                                                 >
                                                     <ToastHeader tag={React.Fragment} tagClassName="" toggle={() => setToast4(!toast4)}>
-                                                        <img src={logo} alt="" className="me-2" height="18" />
+                                                        <Image src={logo} alt="" className="me-2" height="18" />
                                                         <strong className="me-auto">Skote</strong>
                                                         <small className="text-muted">just now</small>
                                                     </ToastHeader>
@@ -163,7 +164,7 @@ const UiToast = () => {
                                                     role="alert"
                                                 >
                                                     <ToastHeader tag={React.Fragment} tagClassName="" toggle={() => setToast5(!toast5)}>
-                                                        <img src={logo} alt="" className="me-2" height="18" />
+                                                        <Image src={logo} alt="" className="me-2" height="18" />
                                                         <strong className="me-auto">Skote</strong>
                                                         <small className="text-muted">2 sec ago</small>
                                                     </ToastHeader>

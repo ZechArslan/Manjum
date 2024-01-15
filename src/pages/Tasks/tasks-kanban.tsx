@@ -39,6 +39,7 @@ import Spinners from "Components/Common/Spinner"
 import { AddTeamMember } from "common/data"
 //Import Breadcrumb
 import Breadcrumbs from "../../Components/Common/Breadcrumb";
+import Image from "next/image"
 
 interface CardData {
   id: string;
@@ -401,13 +402,13 @@ const TasksKanban = () => {
                                                           {
                                                             logo.imges ?
                                                               <div>
-                                                                <img src={logo.imges} className="rounded" height={48} alt="" />
+                                                                <Image src={logo.imges} className="rounded" height={48} alt="" />
                                                               </div>
 
                                                               :
                                                               <div className="border rounded avatar-sm">
                                                                 <span className="avatar-title bg-transparent">
-                                                                  <img src={logo.img} className="avatar-xs" alt="" />
+                                                                  <Image src={logo.img} className="avatar-xs" alt="" />
                                                                 </span>
                                                               </div>
 
@@ -424,7 +425,7 @@ const TasksKanban = () => {
                                                     usrimg.img && (
                                                       <div key={key} className="avatar-group-item">
                                                         <Link to="#" className="d-inline-block" defaultValue={`member-${usrimg.id}`}>
-                                                          <img src={usrimg.img} alt="" className="rounded-circle avatar-xs" />
+                                                          <Image src={usrimg.img} alt="" className="rounded-circle avatar-xs" />
                                                         </Link>
                                                       </div>
                                                     )
@@ -577,7 +578,7 @@ const TasksKanban = () => {
                           <label className="form-check-label ms-2" htmlFor={"member" + image.id}>
                             {image.name}
                           </label>
-                          <img
+                          <Image
                             src={image.img}
                             className="rounded-circle avatar-xs m-1"
                             alt=""

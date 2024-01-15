@@ -15,6 +15,7 @@ import { createSelector } from 'reselect';
 // img
 import logoDark from "../../assets/images/logo-dark.png";
 import logoLight from "../../assets/images/logo-light.png";
+import Image from "next/image";
 
 const InvoiceDetail = (props: any) => {
 
@@ -46,7 +47,7 @@ const InvoiceDetail = (props: any) => {
 
   //Print the Invoice
   const printInvoice = () => {
-    window.print();
+    // window.print();
   };
 
   return (
@@ -65,8 +66,8 @@ const InvoiceDetail = (props: any) => {
                         Order # {invoiceDetail.orderId}
                       </h4>
                       <div className="auth-logo mb-4">
-                        <img src={logoDark} alt="logo" className="auth-logo-dark" height="20" />
-                        <img src={logoLight} alt="logo" className="auth-logo-light" height="20" />
+                        <Image src={logoDark} alt="logo" className="auth-logo-dark" height="20" />
+                        <Image src={logoLight} alt="logo" className="auth-logo-light" height="20" />
                       </div>
                     </div>
                     <hr />

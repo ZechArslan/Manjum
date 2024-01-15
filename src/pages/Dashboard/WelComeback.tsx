@@ -1,5 +1,5 @@
 import React from "react"
-
+import Image from "next/image"
 import { Row, Col, Card, CardBody } from "reactstrap"
 import { Link } from "react-router-dom"
 
@@ -19,7 +19,7 @@ const WelComeback: React.FC = () => {
               </div>
             </Col>
             <Col xs={5} className="align-self-end">
-              <img src={profileImg} alt="" className="img-fluid" />
+              <Image src={profileImg} alt="" className="img-fluid" />
             </Col>
           </Row>
         </div>
@@ -27,7 +27,7 @@ const WelComeback: React.FC = () => {
           <Row>
             <Col sm={4}>
               <div className="avatar-md profile-user-wid mb-4">
-                <img
+                <Image
                   src={avatar1}
                   alt=""
                   className="img-thumbnail rounded-circle"

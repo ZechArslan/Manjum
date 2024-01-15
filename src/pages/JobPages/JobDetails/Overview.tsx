@@ -4,6 +4,7 @@ import { Card, CardBody, Col } from 'reactstrap';
 
 //import images
 import adobephotoshop from "../../../assets/images/companies/adobe-photoshop.svg";
+import Image from 'next/image';
 
 const Overview = () => {
     return (
@@ -57,7 +58,7 @@ const Overview = () => {
                 <Card>
                     <CardBody>
                         <div className="text-center">
-                            <img src={adobephotoshop} alt="" height="50" className="mx-auto d-block" />
+                            <Image src={adobephotoshop} alt="" height="50" className="mx-auto d-block" />
                             <h5 className="mt-3 mb-1">Themesbrand</h5>
                             <p className="text-muted mb-0">Since July 2017</p>
                         </div>

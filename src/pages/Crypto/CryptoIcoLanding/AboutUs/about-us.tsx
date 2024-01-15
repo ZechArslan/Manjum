@@ -14,6 +14,7 @@ import client6 from "../../../../assets/images/clients/6.png";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Navigation, Autoplay } from 'swiper/modules';
 import "../../../../../node_modules/swiper/swiper.scss";
+import Image from "next/image";
 
 const AboutUs = () => {
 
@@ -144,32 +145,32 @@ const AboutUs = () => {
                   className="owl-carousel owl-theme clients-carousel" id="clients-carousel" dir="ltr">
                   <SwiperSlide className="item">
                     <div className="client-images">
-                      <img src={client1} alt="client-img" className="mx-auto img-fluid d-block" />
+                      <Image src={client1} alt="client-img" className="mx-auto img-fluid d-block" />
                     </div>
                   </SwiperSlide>
                   <SwiperSlide className="item">
                     <div className="client-images">
-                      <img src={client2} alt="client-img" className="mx-auto img-fluid d-block" />
+                      <Image src={client2} alt="client-img" className="mx-auto img-fluid d-block" />
                     </div>
                   </SwiperSlide>
                   <SwiperSlide className="item">
                     <div className="client-images">
-                      <img src={client3} alt="client-img" className="mx-auto img-fluid d-block" />
+                      <Image src={client3} alt="client-img" className="mx-auto img-fluid d-block" />
                     </div>
                   </SwiperSlide>
                   <SwiperSlide className="item">
                     <div className="client-images">
-                      <img src={client4} alt="client-img" className="mx-auto img-fluid d-block" />
+                      <Image src={client4} alt="client-img" className="mx-auto img-fluid d-block" />
                     </div>
                   </SwiperSlide>
                   <SwiperSlide className="item">
                     <div className="client-images">
-                      <img src={client5} alt="client-img" className="mx-auto img-fluid d-block" />
+                      <Image src={client5} alt="client-img" className="mx-auto img-fluid d-block" />
                     </div>
                   </SwiperSlide>
                   <SwiperSlide className="item">
                     <div className="client-images">
-                      <img src={client6} alt="client-img" className="mx-auto img-fluid d-block" />
+                      <Image src={client6} alt="client-img" className="mx-auto img-fluid d-block" />
                     </div>
                   </SwiperSlide>
                 </Swiper>

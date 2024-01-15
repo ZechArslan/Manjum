@@ -4,6 +4,7 @@ import { Button, Modal, ModalBody, ModalFooter, ModalHeader, Table } from "react
 // Image
 import img7 from "../../../assets/images/product/img-7.png"
 import img4 from "../../../assets/images/product/img-4.png"
+import Image from "next/image"
 
 const EcommerenceOrdersModal = (props?: any) => {
 
@@ -34,7 +35,7 @@ const EcommerenceOrdersModal = (props?: any) => {
                 <tr>
                   <th scope="row">
                     <div>
-                      <img src={img7} alt="" className="avatar-sm" />
+                      <Image src={img7} alt="" className="avatar-sm" />
                     </div>
                   </th>
                   <td>
@@ -50,7 +51,7 @@ const EcommerenceOrdersModal = (props?: any) => {
                 <tr>
                   <th scope="row">
                     <div>
-                      <img src={img4} alt="" className="avatar-sm" />
+                      <Image src={img4} alt="" className="avatar-sm" />
                     </div>
                   </th>
                   <td>

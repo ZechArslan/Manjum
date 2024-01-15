@@ -7,8 +7,8 @@ import { isEmpty } from "lodash";
 
 import { Discount, EcoAction, FilterClothes, Product } from "./type";
 
-import Spinners from "Components/Common/Spinner";
-import { handleSearchData } from "Components/Common/SearchFile";
+import Spinners from "../../Components/Common/Spinner";
+import { handleSearchData } from "../../Components/Common/SearchFile";
 //Import Star Ratings
 import StarRatings from "react-star-ratings";
 
@@ -28,6 +28,7 @@ import { getProducts as onGetProducts } from "../../slices/e-commerence/thunk";
 //redux
 import { useSelector, useDispatch } from "react-redux";
 import { createSelector } from 'reselect';
+import Image from "next/image";
 
 const EcommerceProducts = (props: any) => {
 
@@ -254,7 +255,7 @@ const EcommerceProducts = (props: any) => {
                                     </div>
                                   ) : null}
 
-                                  <img style={{ height: "auto" }} src={product.image} alt="" className="img-fluid mx-auto d-block" />
+                                  <Image style={{ height: "auto" }} src={product.image} alt="" className="img-fluid mx-auto d-block" />
                                 </div>
                                 <div className="mt-4 text-center">
                                   <h5 className="mb-3 text-truncate">

@@ -13,7 +13,8 @@ import { options, recentTasksData, series, } from "common/data/tasks"
 import { useDispatch } from "react-redux"
 import { createSelector } from "reselect"
 import { useSelector } from "react-redux"
-import Spinners from "Components/Common/Spinner"
+import Spinners from "../../Components/Common/Spinner"
+import Image from "next/image"
 
 interface userImages {
   id: number,
@@ -102,7 +103,7 @@ const TasksList = () => {
                                             <div className="avatar-group-item" key={index}>
                                               <Link to="#" className="d-inline-block">
                                                 {userImg.img ?
-                                                  <img src={userImg.img} alt="" className="rounded-circle avatar-xs" />
+                                                  <Image src={userImg.img} alt="" className="rounded-circle avatar-xs" />
                                                   :
                                                   <div className="avatar-xs">
                                                     <span className={`avatar-title rounded-circle ${card.imageTextColor} text-white font-size-16`}>
@@ -167,7 +168,7 @@ const TasksList = () => {
                                         {
                                           avatarImg.src ?
                                             <Link to="#" className="d-inline-block">
-                                              <img src={avatarImg.src} alt="" className="rounded-circle avatar-xs" />
+                                              <Image src={avatarImg.src} alt="" className="rounded-circle avatar-xs" />
                                             </Link>
                                             :
                                             <div className="avatar-xs">

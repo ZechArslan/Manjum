@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-
+import React, { useEffect, useState } from "react";
+import Image from "next/image";
 import { Link } from "react-router-dom";
 
 // reactstrap
@@ -30,9 +30,13 @@ const Header = (props: any) => {
   const [menu, setMenu] = useState<any>(false);
   const [isSearch, setSearch] = useState<any>(false);
   const [socialDrp, setsocialDrp] = useState<any>(false);
+  let document: any;
+  // useEffect(() => {
+  //   // eslint-disable-next-line react-hooks/exhaustive-deps
+  //   document = window.document;
+  // }, []);
 
   function toggleFullscreen() {
-    let document: any = window.document;
     if (
       !document.fullscreenElement &&
       /* alternative standard method */ !document.mozFullScreenElement &&
@@ -44,9 +48,10 @@ const Header = (props: any) => {
       } else if (document.documentElement.mozRequestFullScreen) {
         document.documentElement.mozRequestFullScreen();
       } else if (document.documentElement.webkitRequestFullscreen) {
-        document.documentElement.webkitRequestFullscreen(
+        document.documentElement
+          .webkitRequestFullscreen
           //   Element.ALLOW_KEYBOARD_INPUT
-        );
+          ();
       }
     } else {
       if (document.cancelFullScreen) {
@@ -67,19 +72,19 @@ const Header = (props: any) => {
             <div className="navbar-brand-box">
               <Link to="/" className="logo logo-dark">
                 <span className="logo-sm">
-                  <img src={logo} alt="" height="22" />
+                  <Image src={logo} alt="" height="22" />
                 </span>
                 <span className="logo-lg">
-                  <img src={logoDark} alt="" height="17" />
+                  <Image src={logoDark} alt="" height="17" />
                 </span>
               </Link>
 
               <Link to="/" className="logo logo-light">
                 <span className="logo-sm">
-                  <img src={logoLightSvg} alt="" height="22" />
+                  <Image src={logoLightSvg} alt="" height="22" />
                 </span>
                 <span className="logo-lg">
-                  <img src={logoLight} alt="" height="19" />
+                  <Image src={logoLight} alt="" height="19" />
                 </span>
               </Link>
             </div>
@@ -110,11 +115,7 @@ const Header = (props: any) => {
               isOpen={menu}
               toggle={() => setMenu(!menu)}
             >
-              <DropdownToggle
-                className="btn header-item "
-                caret
-                tag="button"
-              >
+              <DropdownToggle className="btn header-item " caret tag="button">
                 {props.t("Mega Menu")} <i className="mdi mdi-chevron-down" />
               </DropdownToggle>
               <DropdownMenu className="dropdown-megamenu">
@@ -239,7 +240,7 @@ const Header = (props: any) => {
 
                       <Col sm={5}>
                         <div>
-                          <img
+                          <Image
                             src={megamenuImg}
                             alt=""
                             className="img-fluid mx-auto d-block"
@@ -312,19 +313,19 @@ const Header = (props: any) => {
                   <Row className="no-gutters">
                     <Col>
                       <Link className="dropdown-icon-item" to="#">
-                        <img src={github} alt="Github" />
+                        <Image src={github} alt="Github" />
                         <span>GitHub</span>
                       </Link>
                     </Col>
                     <Col>
                       <Link className="dropdown-icon-item" to="#">
-                        <img src={bitbucket} alt="bitbucket" />
+                        <Image src={bitbucket} alt="bitbucket" />
                         <span>Bitbucket</span>
                       </Link>
                     </Col>
                     <Col>
                       <Link className="dropdown-icon-item" to="#">
-                        <img src={dribbble} alt="dribbble" />
+                        <Image src={dribbble} alt="dribbble" />
                         <span>Dribbble</span>
                       </Link>
                     </Col>
@@ -332,19 +333,19 @@ const Header = (props: any) => {
                   <Row className="no-gutters">
                     <Col>
                       <Link className="dropdown-icon-item" to="#">
-                        <img src={dropbox} alt="dropbox" />
+                        <Image src={dropbox} alt="dropbox" />
                         <span>Dropbox</span>
                       </Link>
                     </Col>
                     <Col>
                       <Link className="dropdown-icon-item" to="#">
-                        <img src={mail_chimp} alt="mail_chimp" />
+                        <Image src={mail_chimp} alt="mail_chimp" />
                         <span>Mail Chimp</span>
                       </Link>
                     </Col>
                     <Col>
                       <Link className="dropdown-icon-item" to="#">
-                        <img src={slack} alt="slack" />
+                        <Image src={slack} alt="slack" />
                         <span>Slack</span>
                       </Link>
                     </Col>
@@ -386,4 +387,4 @@ const Header = (props: any) => {
   );
 };
 
-export default (withTranslation()(Header));
+export default withTranslation()(Header);

@@ -11,6 +11,7 @@ import { Row, Col, CardBody, Card, Container, Form, Label, Input, FormFeedback }
 // import images
 import profileImg from "../../assets/images/profile-img.png";
 import logoImg from "../../assets/images/logo.svg";
+import Image from "next/image";
 
 const Register = () => {
 
@@ -52,7 +53,7 @@ const Register = () => {
                       </div>
                     </Col>
                     <Col className="col-5 align-self-end">
-                      <img src={profileImg} alt="" className="img-fluid" />
+                      <Image src={profileImg} alt="" className="img-fluid" />
                     </Col>
                   </Row>
                 </div>
@@ -61,7 +62,7 @@ const Register = () => {
                     <Link to="/">
                       <div className="avatar-md profile-user-wid mb-4">
                         <span className="avatar-title rounded-circle bg-light">
-                          <img
+                          <Image
                             src={logoImg}
                             alt=""
                             className="rounded-circle"

@@ -122,8 +122,8 @@ const SidebarContent = (props: any) => {
   }, []);
 
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-    activeMenu();
+    // window.scrollTo({ top: 0, behavior: 'smooth' });
+    // activeMenu();
   }, [activeMenu]);
 
   function scrollElement(item: any) {

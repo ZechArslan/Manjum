@@ -16,7 +16,7 @@ import {
 import { useSelector, useDispatch } from "react-redux";
 
 import { Link } from "react-router-dom";
-import withRouter from "Components/Common/withRouter";
+import withRouter from "../../../Components/Common/withRouter";
 
 // Formik Validation
 import * as Yup from "yup";
@@ -30,6 +30,7 @@ import profile from "../../../assets/images/profile-img.png";
 import logo from "../../../assets/images/email.png";
 import { createSelector } from "reselect";
 import "../../../assets/scss/custom/components/Varification.scss";
+import Image from "next/image";
 const VarificationScreen = () => {
   //meta title
   document.title = "Forget Password | Skote - React Admin & Dashboard Template";
@@ -63,7 +64,6 @@ const VarificationScreen = () => {
 
   return (
     <React.Fragment>
-      
       <div className="my-5 pt-sm-5">
         <Container>
           <Row className="justify-content-center">
@@ -71,14 +71,14 @@ const VarificationScreen = () => {
               <Card className="overflow-hidden">
                 <CardBody className="p-5">
                   <div className="varificationIcon-container">
-                    <img src={logo} alt="" height="70" />
+                    <Image src={logo} alt="" height="70" />
                   </div>
 
                   <div className=" pt-4 varifyContent-container">
                     <p className="">
-                      You've entered <strong>arslan@bennetcom</strong> as the
+                      {`   You've entered <strong>arslan@bennetcom</strong> as the
                       email address for your account. Please verify this email
-                      address by clicking button below. Verify your email
+                      address by clicking button below. Verify your email`}
                     </p>
                     <button
                       className="btn btn-primary btn-sm mt-3"

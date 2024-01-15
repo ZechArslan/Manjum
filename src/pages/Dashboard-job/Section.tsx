@@ -4,6 +4,7 @@ import { Col, Row } from 'reactstrap';
 
 //import images
 import avatar from "../../assets/images/users/avatar-1.jpg";
+import Image from 'next/image';
 
 const Section: React.FC = () => {
 
@@ -12,7 +13,7 @@ const Section: React.FC = () => {
             <Row className="mb-4">
                 <Col lg={12}>
                     <div className="d-flex align-items-center">
-                        <img src={avatar} alt="" className="avatar-sm rounded" />
+                        <Image src={avatar} alt="" className="avatar-sm rounded" />
                         <div className="ms-3 flex-grow-1">
                             <h5 className="mb-2 card-title">Hello, Henry Franklin</h5>
                             <p className="text-muted mb-0">Ready to jump back in?</p>

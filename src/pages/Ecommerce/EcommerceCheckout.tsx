@@ -15,6 +15,7 @@ import Breadcrumbs from "../../Components/Common/Breadcrumb";
 import img1 from "../../assets/images/product/img-1.png"
 import img7 from "../../assets/images/product/img-7.png"
 import { OrderSummary } from "./type";
+import Image from "next/image";
 
 const optionGroup = [
   {
@@ -619,7 +620,7 @@ const EcommerceCheckout = () => {
                                   {(orderSummary || [])?.map((orderItem: OrderSummary, key: number) => (
                                     <tr key={"_orderSummary_" + key}>
                                       <th scope="row">
-                                        <img src={orderItem.img} alt="product-img" title="product-img" className="avatar-md" />
+                                        <Image src={orderItem.img} alt="product-img" title="product-img" className="avatar-md" />
                                       </th>
                                       <td>
                                         <h5 className="font-size-14 text-truncate">

@@ -6,6 +6,7 @@ import logodark from "../../assets/images/logo-dark.png"
 import logolight from "../../assets/images/logo-light.png"
 import { Col, Container, Row } from "reactstrap"
 import { Link } from "react-router-dom"
+import Image from "next/image"
 
 const ConfirmMail2 = () => {
 
@@ -24,14 +25,14 @@ const ConfirmMail2 = () => {
                 <div className="w-100">
                   <div className="d-flex flex-column h-100">
                     <div className="mb-4 mb-md-5">
-                      <a href="/" className="d-block auth-logo">
-                        <img
+                      <a  className="d-block auth-logo">
+                        <Image
                           src={logodark}
                           alt=""
                           height="18"
                           className="auth-logo-dark"
                         />
-                        <img
+                        <Image
                           src={logolight}
                           alt=""
                           height="18"

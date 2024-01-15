@@ -20,15 +20,16 @@ import { useFormik } from "formik";
 //redux
 import { useSelector, useDispatch } from "react-redux";
 
-import withRouter from "Components/Common/withRouter";
+import withRouter from "../../Components/Common/withRouter";
 
 //Import Breadcrumb
-import Breadcrumb from "Components/Common/Breadcrumb";
+import Breadcrumb from "../../Components/Common/Breadcrumb";
 
 import avatar from "../../assets/images/users/avatar-1.jpg";
 
-import { editProfile, resetProfileFlag } from "slices/thunk";
+import { editProfile, resetProfileFlag } from "../../slices/thunk";
 import { createSelector } from 'reselect';
+import Image from "next/image";
 
 const UserProfile = () => {
 
@@ -107,7 +108,7 @@ const UserProfile = () => {
                 <CardBody>
                   <div className="d-flex">
                     <div className="me-3">
-                      <img
+                      <Image
                         src={avatar}
                         alt=""
                         className="avatar-md rounded-circle img-thumbnail"

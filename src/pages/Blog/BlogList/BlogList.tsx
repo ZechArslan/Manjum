@@ -7,6 +7,7 @@ import classnames from "classnames"
 //import images
 import small from "../../../assets/images/small/img-2.jpg"
 import small2 from "../../../assets/images/small/img-6.jpg"
+import Image from "next/image"
 
 const BlogList = () => {
   const [activeTab, toggleTab] = useState<any>("1");
@@ -98,7 +99,7 @@ const BlogList = () => {
                         <p className="text-muted">10 Apr, 2020</p>
 
                         <div className="position-relative mb-3">
-                          <img src={small} alt="" className="img-thumbnail" />
+                          <Image src={small} alt="" className="img-thumbnail" />
                         </div>
 
                         <ul className="list-inline">
@@ -137,7 +138,7 @@ const BlogList = () => {
                         <p className="text-muted">24 Mar, 2020</p>
 
                         <div className="position-relative mb-3">
-                          <img src={small2} alt="" className="img-thumbnail" />
+                          <Image src={small2} alt="" className="img-thumbnail" />
 
                           <div className="blog-play-icon">
                             <Link to="#" className="avatar-sm d-block mx-auto">

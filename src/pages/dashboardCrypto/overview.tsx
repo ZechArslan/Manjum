@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { Col, Card, CardBody, Button, CardTitle } from "reactstrap";
-import ReactApexChart from "react-apexcharts";
-import getChartColorsArray from "../../Components/Common/ChartDynamicColor";
+import dynamic from "next/dynamic";
+const ReactApexChart = dynamic(() => import("react-apexcharts").then((mod) => mod.default), {
+  ssr: false
+});import getChartColorsArray from "../../Components/Common/ChartDynamicColor";
 import { OverviewChartOptions } from "./type";
 
 const Overview = ({ dataColors }: any) => {
@@ -395,7 +397,11 @@ const Overview = ({ dataColors }: any) => {
                   <Button color="light" size="sm" type="button" className={activeA ? "active" : ""} onClick={() => updateChartAll()} id="all">ALL</Button>
                 </div>
                 <div id="overview-chart-timeline">
-                  <ReactApexChart options={options} series={series} type="area" height={240} />
+                  {
+                     (typeof window !== 'undefined') &&
+                     <ReactApexChart options={options} series={series} type="area" height={240} />
+
+                  }
                 </div>
               </div>
             </div>

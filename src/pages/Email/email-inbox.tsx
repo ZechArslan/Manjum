@@ -25,8 +25,9 @@ import EmailToolbar from "./email-toolbar";
 //redux
 import { useSelector, useDispatch } from "react-redux";
 import { createSelector } from 'reselect';
-import Spinners from "Components/Common/Spinner";
+import Spinners from "../../Components/Common/Spinner";
 import { labelsData, mailChatData } from "common/data";
+import Image from "next/image";
 
 interface labelsDataType {
   id: number, icon: string, text: string
@@ -205,7 +206,7 @@ const EmailInbox = () => {
                     (mailChatData || []).map((item: mailChatDataType, index: number) => (
                       <Link to="#" className="d-flex" key={index}>
                         <div className="flex-shrink-0">
-                          <img
+                          <Image
                             className="d-flex me-3 rounded-circle"
                             src={item.imageSrc}
                             alt="skote"

@@ -2,6 +2,7 @@ import React from "react"
 import { Container, Row, Col, Badge } from "reactstrap"
 import { Link } from "react-router-dom"
 import { blogs } from "../../../../common/data";
+import Image from "next/image";
 
 const Blog = () => {
 
@@ -23,7 +24,7 @@ const Blog = () => {
               <Col xl="4" sm="6" key={key}>
                 <div className="blog-box mb-4 mb-xl-0">
                   <div className="position-relative">
-                    <img
+                    <Image
                       src={blog.imgUrl}
                       alt=""
                       className="rounded img-fluid mx-auto d-block"

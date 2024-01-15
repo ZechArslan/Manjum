@@ -15,6 +15,7 @@ import {
 // import images
 import logodark from "../../assets/images/logo-dark.png"
 import logolight from "../../assets/images/logo-light.png"
+import Image from "next/image";
 
 const TwostepVerification = () => {
 
@@ -29,13 +30,13 @@ const TwostepVerification = () => {
             <Col lg={12}>
               <div className="text-center mb-5 text-muted">
                 <Link to="/dashboard" className="d-block auth-logo">
-                  <img
+                  <Image
                     src={logodark}
                     alt=""
                     height="20"
                     className="auth-logo-dark mx-auto"
                   />
-                  <img
+                  <Image
                     src={logolight}
                     alt=""
                     height="20"
@@ -126,7 +127,7 @@ const TwostepVerification = () => {
               </Card>
               <div className="mt-5 text-center">
                 <p>
-                  Didn't receive a code ? <Link to="#" className="fw-medium text-primary"> Resend</Link>
+                 {"Didn't receive a code"} ? <Link to="#" className="fw-medium text-primary"> Resend</Link>
                 </p>
                 <p>
                   © {new Date().getFullYear()} Skote. Crafted with <i className="mdi mdi-heart text-danger"></i> by Themesbrand

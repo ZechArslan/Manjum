@@ -1,10 +1,11 @@
 import React from "react";
 import { Col, Card, CardBody, CardTitle } from "reactstrap";
-import { notificationsData } from "common/data";
+import { notificationsData } from "../../common/data";
 import { Notification } from "./type";
 
 //Simple bar
 import SimpleBar from "simplebar-react";
+import Image from "next/image";
 
 const Notifications: React.FC = () => {
 
@@ -23,7 +24,7 @@ const Notifications: React.FC = () => {
                       <div className="flex-shrink-0 me-3">
                         <div className="avatar-xs">
                           <span className="avatar-title rounded-circle bg-light">
-                            <img src={item.avatar} alt="" height="18" />
+                            <Image src={item.avatar} alt="" height="18" />
                           </span>
                         </div>
                       </div>

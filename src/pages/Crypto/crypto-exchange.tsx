@@ -13,8 +13,9 @@ import SimpleBar from "simplebar-react";
 import Breadcrumbs from "../../Components/Common/Breadcrumb";
 //Import Images
 import avatar from "../../assets/images/users/avatar-1.jpg";
-import { orderbookData } from "common/data";
+import { orderbookData } from "../../common/data";
 import { series } from "./crypto-exchange-series";
+import Image from "next/image";
 
 const CryptoExchange = () => {
 
@@ -98,7 +99,7 @@ const CryptoExchange = () => {
                 <CardBody>
                   <div className="d-flex align-items-start">
                     <div className="flex-shrink-0 me-3">
-                      <img src={avatar} alt="" className="avatar-md rounded-circle img-thumbnail" />
+                      <Image src={avatar} alt="" className="avatar-md rounded-circle img-thumbnail" />
                     </div>
                     <div className="flex-grow-1 align-self-center">
                       <div className="text-muted">

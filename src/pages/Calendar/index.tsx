@@ -31,6 +31,7 @@ import DeleteModal from "./DeleteModal";
 //redux
 import { useSelector, useDispatch } from "react-redux";
 import { createSelector } from 'reselect';
+import Image from "next/image";
 
 const Calender = (props: any) => {
 
@@ -310,7 +311,7 @@ const Calender = (props: any) => {
                       </div>
 
                       <Row className="justify-content-center mt-5">
-                        <img src={verification} alt="" className="img-fluid d-block" />
+                        <Image src={verification} alt="" className="img-fluid d-block" />
                       </Row>
                     </CardBody>
                   </Card>

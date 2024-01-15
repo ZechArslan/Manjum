@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 import { Link } from "react-router-dom";
 import {
@@ -18,7 +19,7 @@ const CardProject = ({ projects }: any) => {
               <div className="d-flex">
                 <div className="avatar-md me-4">
                   <span className="avatar-title rounded-circle bg-light text-danger font-size-16">
-                    <img src={project.img} alt="" height="30" />
+                    <Image src={project.img} alt="" height="30" />
 
                   </span>
                 </div>
@@ -33,7 +34,7 @@ const CardProject = ({ projects }: any) => {
                         <React.Fragment key={key}>
                           <div className="avatar-group-item">
                             <Link to="#" className="d-inline-block" id={"member" + team.id} >
-                              <img src={team.img} className="rounded-circle avatar-xs" alt="" />
+                              <Image src={team.img} className="rounded-circle avatar-xs" alt="" />
 
                               <UncontrolledTooltip placement="top" target={"member" + team.id}>{team.fullname}</UncontrolledTooltip>
                             </Link>

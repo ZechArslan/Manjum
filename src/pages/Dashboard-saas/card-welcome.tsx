@@ -3,6 +3,7 @@ import { Row, Col, Card } from "reactstrap"
 
 //Import Images
 import profileImg from "../../assets/images/profile-img.png"
+import Image from "next/image";
 
 const CardWelcome: React.FC = () => {
   return (
@@ -23,7 +24,7 @@ const CardWelcome: React.FC = () => {
                 </div>
               </Col>
               <Col xs={5} className="align-self-end">
-                <img src={profileImg} alt="" className="img-fluid" />
+                <Image src={profileImg} alt="" className="img-fluid" />
               </Col>
             </Row>
           </div>

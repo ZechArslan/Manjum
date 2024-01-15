@@ -13,6 +13,7 @@ import Dropzone from "react-dropzone"
 import Breadcrumbs from "../../Components/Common/Breadcrumb";
 
 import { Link } from "react-router-dom"
+import Image from "next/image";
 
 const FormUpload = () => {
 
@@ -91,7 +92,7 @@ const FormUpload = () => {
                             <div className="p-2">
                               <Row className="align-items-center">
                                 <Col className="col-auto">
-                                  <img
+                                  <Image
                                     data-dz-thumbnail=""
                                     height="80"
                                     className="avatar-sm rounded bg-light"

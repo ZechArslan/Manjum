@@ -1,5 +1,5 @@
-import { getFirebaseBackend } from "helpers/firebase_helper";
-import { postFakeLogin, postJwtLogin } from "helpers/fakebackend_helper";
+import { getFirebaseBackend } from "../../../helpers/firebase_helper";
+import { postFakeLogin, postJwtLogin } from "../../../helpers/fakebackend_helper";
 import { loginSuccess, apiError, logoutUserSuccess, resetLoginFlag } from "./reducer";
 
 export const loginuser = (user: any, history: any) => async (dispatch: any) => {

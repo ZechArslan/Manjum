@@ -28,9 +28,10 @@ import { Link } from "react-router-dom";
 import profileImg from "../../assets/images/profile-img.png";
 import logoImg from "../../assets/images/logo.svg";
 import { createSelector } from "reselect";
-import VarificationScreen from "Components/Common/VerificationScreen/Index";
+import VarificationScreen from "../../Components/Common/VerificationScreen/Index";
+import Image from "next/image";
 
-const Register = (props) => {
+const Register = (props:any) => {
   const [showVarification, setshowVarification] = useState<boolean>(false);
 
   //meta title
@@ -95,7 +96,7 @@ const Register = (props) => {
                           </div>
                         </Col>
                         <Col className="col-5 align-self-end">
-                          <img src={profileImg} alt="" className="img-fluid" />
+                          <Image src={profileImg} alt="" className="img-fluid" />
                         </Col>
                       </Row>
                     </div>
@@ -104,7 +105,7 @@ const Register = (props) => {
                         <Link to="/">
                           <div className="avatar-md profile-user-wid mb-4">
                             <span className="avatar-title rounded-circle bg-light">
-                              <img
+                              <Image
                                 src={logoImg}
                                 alt=""
                                 className="rounded-circle"

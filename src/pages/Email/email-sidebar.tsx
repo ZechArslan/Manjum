@@ -11,6 +11,7 @@ import avatar2 from "../../assets/images/users/avatar-2.jpg"
 import avatar3 from "../../assets/images/users/avatar-3.jpg"
 import avatar4 from "../../assets/images/users/avatar-4.jpg"
 import avatar6 from "../../assets/images/users/avatar-6.jpg"
+import Image from "next/image"
 
 const EmailSideBar = () => {
 
@@ -73,7 +74,7 @@ const EmailSideBar = () => {
 
         <div className="mt-2">
           <Link to="#" className="d-flex">
-            <img className="d-flex me-3 rounded-circle" src={avatar2} alt="skote" height="36" />
+            <Image className="d-flex me-3 rounded-circle" src={avatar2} alt="skote" height="36" />
             <div className="flex-grow-1 chat-user-box">
               <p className="user-title m-0">Scott Median</p>
               <p className="text-muted">Hello</p>
@@ -81,7 +82,7 @@ const EmailSideBar = () => {
           </Link>
 
           <Link to="#" className="d-flex">
-            <img className="d-flex me-3 rounded-circle" src={avatar3} alt="skote" height="36" />
+            <Image className="d-flex me-3 rounded-circle" src={avatar3} alt="skote" height="36" />
             <div className="chat-user-box">
               <p className="user-title m-0">Julian Rosa</p>
               <p className="text-muted">What about our next..</p>
@@ -89,7 +90,7 @@ const EmailSideBar = () => {
           </Link>
 
           <Link to="#" className="d-flex">
-            <img className="d-flex me-3 rounded-circle" src={avatar4} alt="skote" height="36" />
+            <Image className="d-flex me-3 rounded-circle" src={avatar4} alt="skote" height="36" />
             <div className="chat-user-box">
               <p className="user-title m-0">David Medina</p>
               <p className="text-muted">Yeah everything is fine</p>
@@ -97,7 +98,7 @@ const EmailSideBar = () => {
           </Link>
 
           <Link to="#" className="d-flex">
-            <img className="d-flex me-3 rounded-circle" src={avatar6} alt="skote" height="36" />
+            <Image className="d-flex me-3 rounded-circle" src={avatar6} alt="skote" height="36" />
             <div className="chat-user-box">
               <p className="user-title m-0">Jay Baker</p>
               <p className="text-muted">Wow that&apos;s great</p>

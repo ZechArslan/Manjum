@@ -9,6 +9,7 @@ import { icoLandingTeam } from "../../../../common/data";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from "swiper/modules";
 import "../../../../../node_modules/swiper/swiper.scss";
+import Image from "next/image";
 
 const OurTeam: React.FC = () => {
 
@@ -52,7 +53,7 @@ const OurTeam: React.FC = () => {
                   <Card className="text-center team-box">
                     <CardBody>
                       <div>
-                        <img src={item.img} alt="" className="rounded w-100" />
+                        <Image src={item.img} alt="" className="rounded w-100" />
                       </div>
 
                       <div className="mt-3">

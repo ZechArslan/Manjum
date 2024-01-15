@@ -3,20 +3,21 @@ import { Link } from "react-router-dom";
 import withRouter from "../../../Components/Common/withRouter";
 import { Card, CardBody, CardTitle, Col, Container, Row, Table } from "reactstrap";
 
-import TableContainer from "Components/Common/TableContainer";
+import TableContainer from "../../../Components/Common/TableContainer";
 
 //Import Breadcrumb
 import Breadcrumbs from "../../../Components/Common/Breadcrumb";
 
 //Import mini card widgets
 import MiniCards from "./mini-card";
-import { userProfile } from "common/data";
+import { userProfile } from "../../../common/data";
 
 //Import Images
 import profile1 from "assets/images/profile-img.png";
 
 // import charts
 import ApexRevenue from "../ApexRevenue";
+import Image from "next/image";
 
 const ContactsProfile = () => {
 
@@ -89,7 +90,7 @@ const ContactsProfile = () => {
                       </div>
                     </Col>
                     <Col xs={5} className="align-self-end">
-                      <img src={profile1} alt="" className="img-fluid" />
+                      <Image src={profile1} alt="" className="img-fluid" />
                     </Col>
                   </Row>
                 </div>
@@ -97,7 +98,7 @@ const ContactsProfile = () => {
                   <Row>
                     <Col sm={4}>
                       <div className="avatar-md profile-user-wid mb-4">
-                        <img src={userProfile.img} alt="" className="img-thumbnail rounded-circle" />
+                        <Image src={userProfile.img} alt="" className="img-thumbnail rounded-circle" />
                       </div>
                       <h5 className="font-size-15 text-truncate">  {userProfile.name}</h5>
                       <p className="text-muted mb-0 text-truncate">{userProfile.designation} </p>

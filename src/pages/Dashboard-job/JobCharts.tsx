@@ -1,6 +1,8 @@
 import React from 'react';
-import ReactApexChart from "react-apexcharts";
-
+import dynamic from "next/dynamic";
+const ReactApexChart = dynamic(() => import("react-apexcharts").then((mod) => mod.default), {
+  ssr: false
+});
 import getChartColorsArray from "../../Components/Common/ChartDynamicColor";
 import { ChartOptions, LineChartOptions, ReceivedTimeSeries, StatisticsSerias } from './type';
 

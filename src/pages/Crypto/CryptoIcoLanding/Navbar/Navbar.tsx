@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 // Import Images
 import logoDark from "../../../../assets/images/logo-dark.png";
 import logoLight from "../../../../assets/images/logo-light.png";
+import Image from "next/image";
 
 const Navbar = () => {
     const [isOpenMenu, setIsOpenMenu] = useState(false);
@@ -14,7 +15,7 @@ const Navbar = () => {
     const toggle = () => setIsOpenMenu(!isOpenMenu);
 
     useEffect(() => {
-        window.addEventListener("scroll", scrollNavigation, true);
+        // window.addEventListener("scroll", scrollNavigation, true);
     });
 
     const scrollNavigation = () => {
@@ -39,8 +40,8 @@ const Navbar = () => {
             <nav className={"navbar navbar-expand-lg navigation fixed-top sticky " + navClass} id="navbar">
                 <Container>
                     <Link className="navbar-logo" to="/">
-                        <img src={logoDark} alt="" height="19" className="logo logo-dark" />
-                        <img src={logoLight} alt="" height="19" className="logo logo-light" />
+                        <Image src={logoDark} alt="" height="19" className="logo logo-dark" />
+                        <Image src={logoLight} alt="" height="19" className="logo logo-light" />
                     </Link>
 
                     <NavbarToggler className="btn btn-sm px-3 font-size-16 d-lg-none header-item waves-effect waves-light" onClick={toggle} type="button" data-bs-toggle="collapse"

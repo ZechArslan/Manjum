@@ -13,6 +13,7 @@ import avatar4 from "../../assets/images/users/avatar-4.jpg";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import "../../../node_modules/swiper/swiper.scss";
+import Image from 'next/image';
 
 const CandidateSection: React.FC = () => {
     return (
@@ -29,7 +30,7 @@ const CandidateSection: React.FC = () => {
                                 </div>
                             </div>
                             <div>
-                                <img src={jobs} alt="" height="130" />
+                                <Image src={jobs} alt="" height="130" />
                             </div>
                         </div>
                     </CardBody>
@@ -53,7 +54,7 @@ const CandidateSection: React.FC = () => {
                                 <SwiperSlide>
                                     <div className="carousel-item active" data-bs-interval="3000">
                                         <div className="bg-light p-3 d-flex mb-3 rounded">
-                                            <img src={avatar4} alt="" className="avatar-sm rounded me-3" />
+                                            <Image src={avatar4} alt="" className="avatar-sm rounded me-3" />
                                             <div className="flex-grow-1">
                                                 <h5 className="font-size-15 mb-2"><a href="candidate-overview" className="text-body">Stephen Hadley</a> <span className="badge badge-soft-info">Freelance</span></h5>
                                                 <p className="mb-0 text-muted"><i className="bx bx-map text-body align-middle"></i> Germany</p>
@@ -71,7 +72,7 @@ const CandidateSection: React.FC = () => {
                                             </div>
                                         </div>
                                         <div className="bg-light p-3 d-flex">
-                                            <img src={avatar2} alt="" className="avatar-sm rounded me-3" />
+                                            <Image src={avatar2} alt="" className="avatar-sm rounded me-3" />
                                             <div className="flex-grow-1">
                                                 <h5 className="font-size-15 mb-2"><a href="candidate-overview" className="text-body">Charles Brown</a> <span className="badge badge-soft-success">Full Time</span></h5>
                                                 <p className="mb-0 text-muted"><i className="bx bx-map text-body align-middle"></i> Cambodia</p>
@@ -93,7 +94,7 @@ const CandidateSection: React.FC = () => {
                                 <SwiperSlide>
                                     <div className="carousel-item active" data-bs-interval="3000">
                                         <div className="bg-light p-3 d-flex mb-3 rounded">
-                                            <img src={avatar1} alt="" className="avatar-sm rounded me-3" />
+                                            <Image src={avatar1} alt="" className="avatar-sm rounded me-3" />
                                             <div className="flex-grow-1">
                                                 <h5 className="font-size-15 mb-2"><a href="candidate-overview" className="text-body">Adam Miller</a> <span className="badge badge-soft-warning">Internship</span></h5>
                                                 <p className="mb-0 text-muted"><i className="bx bx-map text-body align-middle"></i> Australia</p>
@@ -111,7 +112,7 @@ const CandidateSection: React.FC = () => {
                                             </div>
                                         </div>
                                         <div className="bg-light p-3 d-flex">
-                                            <img src={avatar3} alt="" className="avatar-sm rounded me-3" />
+                                            <Image src={avatar3} alt="" className="avatar-sm rounded me-3" />
                                             <div className="flex-grow-1">
                                                 <h5 className="font-size-15 mb-2"><a href="candidate-overview" className="text-body">Keith Gonzales</a> <span className="badge badge-soft-info">Freelance</span></h5>
                                                 <p className="mb-0 text-muted"><i className="bx bx-map text-body align-middle"></i> Belgium</p>
@@ -133,7 +134,7 @@ const CandidateSection: React.FC = () => {
                                 <SwiperSlide>
                                     <div className="carousel-item active" data-bs-interval="3000">
                                         <div className="bg-light p-3 d-flex mb-3 rounded">
-                                            <img src={avatar4} alt="" className="avatar-sm rounded me-3" />
+                                            <Image src={avatar4} alt="" className="avatar-sm rounded me-3" />
                                             <div className="flex-grow-1">
                                                 <h5 className="font-size-15 mb-2"><a href="candidate-overview" className="text-body">Bonnie Harney</a> <span className="badge badge-soft-success">Full Timer</span></h5>
                                                 <p className="mb-0 text-muted"><i className="bx bx-map text-body align-middle"></i> Syria</p>
@@ -151,7 +152,7 @@ const CandidateSection: React.FC = () => {
                                             </div>
                                         </div>
                                         <div className="bg-light p-3 d-flex">
-                                            <img src={avatar2} alt="" className="avatar-sm rounded me-3" />
+                                            <Image src={avatar2} alt="" className="avatar-sm rounded me-3" />
                                             <div className="flex-grow-1">
                                                 <h5 className="font-size-15 mb-2"><a href="candidate-overview" className="text-body">Dolores Minter</a> <span className="badge badge-soft-danger">Part Time</span></h5>
                                                 <p className="mb-0 text-muted"><i className="bx bx-map text-body align-middle"></i> San Marino</p>

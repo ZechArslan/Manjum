@@ -20,6 +20,7 @@ import avatar3 from "../../assets/images/users/avatar-3.jpg";
 import avatar4 from "../../assets/images/users/avatar-4.jpg";
 import avatar5 from "../../assets/images/users/avatar-5.jpg";
 import img3 from "../../assets/images/small/img-3.jpg";
+import Image from 'next/image';
 
 function UiUtilities() {
     //meta title
@@ -182,31 +183,31 @@ function UiUtilities() {
 
                                         <div className="hstack gap-4">
                                             <div className="text-center">
-                                                <img src={avatar5} alt="" className="avatar-md rounded d-block mx-auto" />
+                                                <Image src={avatar5} alt="" className="avatar-md rounded d-block mx-auto" />
                                                 <code>.rounded</code>
                                             </div>
                                             <div className="text-center">
-                                                <img src={avatar5} alt="" className="avatar-md rounded-top d-block mx-auto" />
+                                                <Image src={avatar5} alt="" className="avatar-md rounded-top d-block mx-auto" />
                                                 <code>.rounded-top</code>
                                             </div>
                                             <div className="text-center">
-                                                <img src={avatar5} alt="" className="avatar-md rounded-end d-block mx-auto" />
+                                                <Image src={avatar5} alt="" className="avatar-md rounded-end d-block mx-auto" />
                                                 <code>.rounded-end</code>
                                             </div>
                                             <div className="text-center">
-                                                <img src={avatar5} alt="" className="avatar-md rounded-bottom d-block mx-auto" />
+                                                <Image src={avatar5} alt="" className="avatar-md rounded-bottom d-block mx-auto" />
                                                 <code>.rounded-bottom</code>
                                             </div>
                                             <div className="text-center">
-                                                <img src={avatar5} alt="" className="avatar-md rounded-start d-block mx-auto" />
+                                                <Image src={avatar5} alt="" className="avatar-md rounded-start d-block mx-auto" />
                                                 <code>.rounded-start</code>
                                             </div>
                                             <div className="text-center">
-                                                <img src={avatar5} alt="" className="avatar-md rounded-circle d-block mx-auto" />
+                                                <Image src={avatar5} alt="" className="avatar-md rounded-circle d-block mx-auto" />
                                                 <code>.rounded-circle</code>
                                             </div>
                                             <div className="text-center">
-                                                <img src={img3} alt="" height="72" className="rounded-pill d-block mx-auto" />
+                                                <Image src={img3} alt="" height="72" className="rounded-pill d-block mx-auto" />
                                                 <code>.rounded-pill</code>
                                             </div>
                                         </div>
@@ -215,27 +216,27 @@ function UiUtilities() {
                                             <h6 className="mb-3">Border Radius Sizes</h6>
                                             <div className="hstack gap-4">
                                                 <div className="text-center">
-                                                    <img src={avatar2} alt="" className="avatar-md rounded-0 d-block mx-auto" />
+                                                    <Image src={avatar2} alt="" className="avatar-md rounded-0 d-block mx-auto" />
                                                     <code>.rounded-0</code>
                                                 </div>
                                                 <div className="text-center">
-                                                    <img src={avatar2} alt="" className="avatar-md rounded-1 d-block mx-auto" />
+                                                    <Image src={avatar2} alt="" className="avatar-md rounded-1 d-block mx-auto" />
                                                     <code>.rounded-1</code>
                                                 </div>
                                                 <div className="text-center">
-                                                    <img src={avatar2} alt="" className="avatar-md rounded-2 d-block mx-auto" />
+                                                    <Image src={avatar2} alt="" className="avatar-md rounded-2 d-block mx-auto" />
                                                     <code>.rounded-2</code>
                                                 </div>
                                                 <div className="text-center">
-                                                    <img src={avatar2} alt="" className="avatar-md rounded-3 d-block mx-auto" />
+                                                    <Image src={avatar2} alt="" className="avatar-md rounded-3 d-block mx-auto" />
                                                     <code>.rounded-3</code>
                                                 </div>
                                                 <div className="text-center">
-                                                    <img src={avatar2} alt="" className="avatar-md rounded-4 d-block mx-auto" />
+                                                    <Image src={avatar2} alt="" className="avatar-md rounded-4 d-block mx-auto" />
                                                     <code>.rounded-4</code>
                                                 </div>
                                                 <div className="text-center">
-                                                    <img src={avatar2} alt="" className="avatar-md rounded-5 d-block mx-auto" />
+                                                    <Image src={avatar2} alt="" className="avatar-md rounded-5 d-block mx-auto" />
                                                     <code>.rounded-5</code>
                                                 </div>
                                             </div>
@@ -308,23 +309,23 @@ function UiUtilities() {
                                     <p className="card-title-desc">Add the <code>object-fit-value</code> class to the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Replaced_element">replaced element</a></p>
                                     <Row className="text-center gy-3">
                                         <div className="col">
-                                            <img src={avatar1} className="object-fit-contain border rounded avatar-xl d-block mx-auto mb-2" alt="..." />
+                                            <Image src={avatar1} className="object-fit-contain border rounded avatar-xl d-block mx-auto mb-2" alt="..." />
                                             <code>.object-fit-contain</code>
                                         </div>
                                         <div className="col">
-                                            <img src={avatar1} className="object-fit-cover border rounded avatar-xl d-block mx-auto mb-2" alt="..." />
+                                            <Image src={avatar1} className="object-fit-cover border rounded avatar-xl d-block mx-auto mb-2" alt="..." />
                                             <code>.object-fit-cover</code>
                                         </div>
                                         <div className="col">
-                                            <img src={avatar1} className="object-fit-fill border rounded avatar-xl d-block mx-auto mb-2" alt="..." />
+                                            <Image src={avatar1} className="object-fit-fill border rounded avatar-xl d-block mx-auto mb-2" alt="..." />
                                             <code>.object-fit-fill</code>
                                         </div>
                                         <div className="col">
-                                            <img src={avatar1} className="object-fit-scale border rounded avatar-xl d-block mx-auto mb-2" alt="..." />
+                                            <Image src={avatar1} className="object-fit-scale border rounded avatar-xl d-block mx-auto mb-2" alt="..." />
                                             <code>.object-fit-scale</code>
                                         </div>
                                         <div className="col">
-                                            <img src={avatar1} className="object-fit-none border rounded avatar-xl d-block mx-auto mb-2" alt="..." />
+                                            <Image src={avatar1} className="object-fit-none border rounded avatar-xl d-block mx-auto mb-2" alt="..." />
                                             <code>.object-fit-none</code>className
                                         </div>
                                     </Row>
@@ -340,11 +341,11 @@ function UiUtilities() {
                                     <p className="card-title-desc">Use <code>z-index</code> utilities to stack elements on top of one another. Requires a <code>position</code> value other than <code>static</code>, which can be set with custom styles or using our <a href="https://getbootstrap.com/docs/5.3/utilities/position/">position utilities</a>.</p>
 
                                     <div className="position-relative z-1">
-                                        <img src={avatar} alt="" className="avatar-xxl rounded position-relative z-n1" />
-                                        <img src={avatar2} alt="" className="avatar-xxl rounded position-relative z-0 ms-n5 mt-5" />
-                                        <img src={avatar3} alt="" className="avatar-xxl rounded position-relative z-1 ms-n5" />
-                                        <img src={avatar4} alt="" className="avatar-xxl rounded position-relative z-2 ms-n5 mt-5" />
-                                        <img src={avatar5} alt="" className="avatar-xxl rounded position-relative z-3 ms-n5" />
+                                        <Image src={avatar} alt="" className="avatar-xxl rounded position-relative z-n1" />
+                                        <Image src={avatar2} alt="" className="avatar-xxl rounded position-relative z-0 ms-n5 mt-5" />
+                                        <Image src={avatar3} alt="" className="avatar-xxl rounded position-relative z-1 ms-n5" />
+                                        <Image src={avatar4} alt="" className="avatar-xxl rounded position-relative z-2 ms-n5 mt-5" />
+                                        <Image src={avatar5} alt="" className="avatar-xxl rounded position-relative z-3 ms-n5" />
                                     </div>
                                 </CardBody>
                             </Card>

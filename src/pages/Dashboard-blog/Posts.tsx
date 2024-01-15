@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Card, CardBody, CardHeader, Col, NavItem, NavLink, TabContent, TabPane, DropdownMenu, DropdownToggle, UncontrolledDropdown } from "reactstrap";
-import { postPopularData, postRecentData } from "common/data";
+import { postPopularData, postRecentData } from "../../common/data";
 import { PopularDataType, RecentDataType } from "./type";
 import classnames from "classnames";
 
 //SimpleBar
 import SimpleBar from "simplebar-react"
+import Image from "next/image";
 
 const Posts: React.FC = () => {
   const [activeTab, setActiveTab] = useState<string>("1")
@@ -45,7 +46,7 @@ const Posts: React.FC = () => {
                         <li className="list-group-item py-3" key={index}>
                           <div className="d-flex">
                             <div className="me-3">
-                              <img src={item.img} alt="" className="avatar-md h-auto d-block rounded" />
+                              <Image src={item.img} alt="" className="avatar-md h-auto d-block rounded" />
                             </div>
                             <div className="align-self-center overflow-hidden me-auto">
                               <div>
@@ -77,7 +78,7 @@ const Posts: React.FC = () => {
                         <li className="list-group-item py-3" key={index}>
                           <div className="d-flex">
                             <div className="me-3">
-                              <img src={item.img} alt="" className="avatar-md h-auto d-block rounded" />
+                              <Image src={item.img} alt="" className="avatar-md h-auto d-block rounded" />
                             </div>
                             <div className="align-self-center overflow-hidden me-auto">
                               <div>

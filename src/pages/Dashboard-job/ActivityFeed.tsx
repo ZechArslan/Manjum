@@ -5,8 +5,9 @@ import { Card, CardBody, Col } from 'reactstrap';
 // Import Scrollbar
 import SimpleBar from "simplebar-react";
 
-import { activityFeedData } from 'common/data';
+import { activityFeedData } from '../../common/data';
 import { FeedDataType } from './type';
+import Image from 'next/image';
 
 const ActivityFeed: React.FC = () => {
 
@@ -25,7 +26,7 @@ const ActivityFeed: React.FC = () => {
                                         </div>
                                         <div className="d-flex">
                                             <div className="flex-shrink-0 me-3">
-                                                {event.type === "application" && <img src={event.img} alt="" className="avatar-xs rounded-circle" />}
+                                                {event.type === "application" && <Image src={event.img ?? ""} alt="" className="avatar-xs rounded-circle" />}
                                                 {event.type === "subscription" &&
                                                     <div className="avatar-xs">
                                                         <div className="avatar-title bg-primary-subtle text-primary rounded-circle">

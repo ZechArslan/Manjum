@@ -21,6 +21,7 @@ import { createSelector } from 'reselect';
 
 // import { productListvar } from "../../common/data";
 import { deleteCart as onDeleteCart, getCart as onGetCart } from "slices/thunk";
+import Image from "next/image";
 
 const EcommerceCart = () => {
 
@@ -116,7 +117,7 @@ const EcommerceCart = () => {
                           return (
                             <tr key={product.id}>
                               <td>
-                                <img src={product.img} alt="product-img" title="product-img" className="avatar-md" />
+                                <Image src={product.img} alt="product-img" title="product-img" className="avatar-md" />
                               </td>
                               <td>
                                 <h5 className="font-size-14 text-truncate">

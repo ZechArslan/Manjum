@@ -12,6 +12,7 @@ import logodark from "../../assets/images/logo-dark.png";
 import logolight from "../../assets/images/logo-light.png";
 import user from "../../assets/images/users/avatar-1.jpg";
 import CarouselPage from "./CarouselPage";
+import Image from "next/image";
 
 const LockScreen2 = (props: any) => {
 
@@ -45,13 +46,13 @@ const LockScreen2 = (props: any) => {
                     <div className="mb-4 mb-md-5">
                       <Link to="/dashboard"
                         className="d-block auth-logo">
-                        <img
+                        <Image
                           src={logodark}
                           alt=""
                           height="18"
                           className="auth-logo-dark"
                         />
-                        <img
+                        <Image
                           src={logolight}
                           alt=""
                           height="18"
@@ -80,7 +81,7 @@ const LockScreen2 = (props: any) => {
                           ) : null}
 
                           <div className="user-thumb text-center mb-4">
-                            <img
+                            <Image
                               src={user}
                               className="rounded-circle img-thumbnail avatar-md"
                               alt="thumbnail"

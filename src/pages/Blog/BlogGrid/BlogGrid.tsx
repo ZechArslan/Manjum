@@ -14,6 +14,7 @@ import img1 from "../../../assets/images/small/img-2.jpg"
 import img2 from "../../../assets/images/small/img-6.jpg"
 import img3 from "../../../assets/images/small/img-1.jpg"
 import { Link } from "react-router-dom"
+import Image from "next/image"
 
 const BlogGrid = () => {
   const [activeTab, setActiveTab] = useState("1")
@@ -111,7 +112,7 @@ const BlogGrid = () => {
                             </div>
 
                             <div className="position-relative">
-                              <img
+                              <Image
                                 src={img1}
                                 alt=""
                                 className="img-thumbnail"
@@ -160,7 +161,7 @@ const BlogGrid = () => {
                             </div>
 
                             <div className="position-relative">
-                              <img
+                              <Image
                                 src={img2}
                                 alt=""
                                 className="img-thumbnail"
@@ -222,7 +223,7 @@ const BlogGrid = () => {
                             </div>
 
                             <div className="position-relative">
-                              <img
+                              <Image
                                 src={img3}
                                 alt=""
                                 className="img-thumbnail"
@@ -271,7 +272,7 @@ const BlogGrid = () => {
                             </div>
 
                             <div className="position-relative">
-                              <img
+                              <Image
                                 src={img1}
                                 alt=""
                                 className="img-thumbnail"

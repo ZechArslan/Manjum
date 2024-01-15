@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import React from "react";
 import { Card, CardBody, CardFooter, Col, UncontrolledTooltip } from "reactstrap";
 import { size } from "lodash";
+import Image from 'next/image';
 
 const CardContact = (props: any) => {
   const { user } = props;
@@ -19,7 +20,7 @@ const CardContact = (props: any) => {
               </div>
             ) : (
               <div className="mb-4">
-                <img className="rounded-circle avatar-sm" src={user.img} alt="" />
+                <Image className="rounded-circle avatar-sm" src={user.img} alt="" />
               </div>
             )}
 

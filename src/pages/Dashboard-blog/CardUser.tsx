@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Card, CardBody, Col, Row } from "reactstrap";
-import ReactApexChart from "react-apexcharts";
+import dynamic from "next/dynamic";
+const ReactApexChart = dynamic(() => import("react-apexcharts").then((mod) => mod.default), {
+  ssr: false
+});
 import getChartColorsArray from "../../Components/Common/ChartDynamicColor";
 import { blogStatsData } from "common/data";
 import { getVisitors as onGetVisitors } from "slices/thunk";
@@ -9,26 +12,25 @@ import { createSelector } from "reselect";
 import { ChartOptions, blogStatsDataType, VisitorsType } from "./type";
 
 interface series {
-  name: string,
-  data: number[]
+  name: string;
+  data: number[];
 }
 interface ChartState {
   dashboard: {
-    dashboardVisitors: VisitorsType[]
-  }
+    dashboardVisitors: VisitorsType[];
+  };
 }
 
 const CardUser = ({ dataColors }: any) => {
-
   const apexCardUserChartColors = getChartColorsArray(dataColors);
   const dispatch = useDispatch<any>();
 
   const selectorChartData = createSelector(
     (state: ChartState) => state.dashboard,
     (dashboard) => ({
-      dashboardVisitors: dashboard.dashboardVisitors
+      dashboardVisitors: dashboard.dashboardVisitors,
     })
-  )
+  );
 
   const { dashboardVisitors }: any = useSelector(selectorChartData);
 
@@ -36,13 +38,13 @@ const CardUser = ({ dataColors }: any) => {
   const [activeTab, setActiveTab] = useState<number>(1);
 
   useEffect(() => {
-    dispatch(onGetVisitors(1))
-  }, [dispatch])
+    dispatch(onGetVisitors(1));
+  }, [dispatch]);
 
   const handleChangeChartData = (id: number) => {
     setActiveTab(id);
-    dispatch(onGetVisitors(id))
-  }
+    dispatch(onGetVisitors(id));
+  };
 
   const series: series[] = [
     {
@@ -53,7 +55,7 @@ const CardUser = ({ dataColors }: any) => {
       name: "Previous",
       data: visitors?.data?.PreviousData || [],
     },
-  ]
+  ];
 
   const options: ChartOptions | any = {
     chart: {
@@ -82,7 +84,20 @@ const CardUser = ({ dataColors }: any) => {
       },
     },
     xaxis: {
-      categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+      categories: [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Nov",
+        "Dec",
+      ],
     },
     markers: {
       size: 3,
@@ -97,31 +112,33 @@ const CardUser = ({ dataColors }: any) => {
       position: "top",
       horizontalAlign: "right",
     },
-  }
+  };
 
   return (
     <React.Fragment>
       <Col xl={8}>
         <Row>
-          {(blogStatsData || [])?.map((stat: blogStatsDataType, index: number) => (
-            <Col lg={4} key={index}>
-              <Card className="blog-stats-wid">
-                <CardBody>
-                  <div className="d-flex flex-wrap">
-                    <div className="me-3">
-                      <p className="text-muted mb-2">{stat.title}</p>
-                      <h5 className="mb-0">{stat.value}</h5>
-                    </div>
-                    <div className="avatar-sm ms-auto">
-                      <div className="avatar-title bg-light rounded-circle text-primary font-size-20">
-                        <i className={stat.icon}></i>
+          {(blogStatsData || [])?.map(
+            (stat: blogStatsDataType, index: number) => (
+              <Col lg={4} key={index}>
+                <Card className="blog-stats-wid">
+                  <CardBody>
+                    <div className="d-flex flex-wrap">
+                      <div className="me-3">
+                        <p className="text-muted mb-2">{stat.title}</p>
+                        <h5 className="mb-0">{stat.value}</h5>
+                      </div>
+                      <div className="avatar-sm ms-auto">
+                        <div className="avatar-title bg-light rounded-circle text-primary font-size-20">
+                          <i className={stat.icon}></i>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </CardBody>
-              </Card>
-            </Col>
-          ))}
+                  </CardBody>
+                </Card>
+              </Col>
+            )
+          )}
         </Row>
 
         <Card>
@@ -130,16 +147,40 @@ const CardUser = ({ dataColors }: any) => {
               <h5 className="card-title me-2">Visitors</h5>
               <div className="ms-auto">
                 <div className="toolbar d-flex flex-wrap gap-2 text-end">
-                  <button type="button" className={`btn btn-light btn-sm ${activeTab === 1 && "active"}`} onClick={() => handleChangeChartData(1)}>
+                  <button
+                    type="button"
+                    className={`btn btn-light btn-sm ${
+                      activeTab === 1 && "active"
+                    }`}
+                    onClick={() => handleChangeChartData(1)}
+                  >
                     ALL
                   </button>
-                  <button type="button" className={`btn btn-light btn-sm ${activeTab === 2 && "active"}`} onClick={() => handleChangeChartData(2)}>
+                  <button
+                    type="button"
+                    className={`btn btn-light btn-sm ${
+                      activeTab === 2 && "active"
+                    }`}
+                    onClick={() => handleChangeChartData(2)}
+                  >
                     1M
                   </button>
-                  <button type="button" className={`btn btn-light btn-sm ${activeTab === 3 && "active"}`} onClick={() => handleChangeChartData(3)}>
+                  <button
+                    type="button"
+                    className={`btn btn-light btn-sm ${
+                      activeTab === 3 && "active"
+                    }`}
+                    onClick={() => handleChangeChartData(3)}
+                  >
                     6M
                   </button>
-                  <button type="button" className={`btn btn-light btn-sm ${activeTab === 4 && "active"}`} onClick={() => handleChangeChartData(4)}>
+                  <button
+                    type="button"
+                    className={`btn btn-light btn-sm ${
+                      activeTab === 4 && "active"
+                    }`}
+                    onClick={() => handleChangeChartData(4)}
+                  >
                     1Y
                   </button>
                 </div>
@@ -159,7 +200,10 @@ const CardUser = ({ dataColors }: any) => {
                   <p className="text-muted mb-1">This Month</p>
                   <h5>
                     {visitors.thisMonth}
-                    <span className="text-success font-size-13"> 0.2 % <i className="mdi mdi-arrow-up ms-1"></i></span>
+                    <span className="text-success font-size-13">
+                      {" "}
+                      0.2 % <i className="mdi mdi-arrow-up ms-1"></i>
+                    </span>
                   </h5>
                 </div>
               </Col>
@@ -169,7 +213,9 @@ const CardUser = ({ dataColors }: any) => {
                   <p className="text-muted mb-1">This Year</p>
                   <h5>
                     {visitors.thisYear}
-                    <span className="text-success font-size-13"> 0.1 % <i className="mdi mdi-arrow-up ms-1"></i>
+                    <span className="text-success font-size-13">
+                      {" "}
+                      0.1 % <i className="mdi mdi-arrow-up ms-1"></i>
                     </span>
                   </h5>
                 </div>
@@ -179,7 +225,15 @@ const CardUser = ({ dataColors }: any) => {
             <hr className="mb-4" />
 
             <div id="area-chart" dir="ltr">
-              <ReactApexChart options={options} series={series} type="area" height={350} className="apex-charts" />
+              {typeof window !== "undefined" && (
+                <ReactApexChart
+                  options={options}
+                  series={series}
+                  type="area"
+                  height={350}
+                  className="apex-charts"
+                />
+              )}
             </div>
           </CardBody>
         </Card>
@@ -187,7 +241,5 @@ const CardUser = ({ dataColors }: any) => {
     </React.Fragment>
   );
 };
-
-
 
 export default CardUser;

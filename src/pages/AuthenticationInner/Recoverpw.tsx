@@ -18,6 +18,7 @@ import {
 // import images
 import profile from "../../assets/images/profile-img.png";
 import logo from "../../assets/images/logo.svg";
+import Image from "next/image";
 
 const Recoverpw = () => {
 
@@ -55,7 +56,7 @@ const Recoverpw = () => {
                       </div>
                     </Col>
                     <Col xs={5} className="align-self-end">
-                      <img
+                      <Image
                         src={profile}
                         alt=""
                         className="img-fluid"
@@ -68,7 +69,7 @@ const Recoverpw = () => {
                     <Link to="/dashboard">
                       <div className="avatar-md profile-user-wid mb-4">
                         <span className="avatar-title rounded-circle bg-light">
-                          <img
+                          <Image
                             src={logo}
                             alt=""
                             className="rounded-circle"

@@ -6,6 +6,7 @@ import { Container, Row, Col, Card, CardBody } from "reactstrap"
 import maintenance from "../../assets/images/maintenance.svg"
 import logoDark from "../../assets/images/logo-dark.png"
 import logoLight from "../../assets/images/logo-light.png"
+import Image from "next/image"
 
 const PagesMaintenance = () => {
 
@@ -24,15 +25,15 @@ const PagesMaintenance = () => {
               <div className="home-wrapper">
                 <div className="mb-5">
                   <Link to="/dashboard" className="d-block auth-logo" >
-                    <img src={logoDark} alt="logo" className="auth-logo-dark mx-auto" height="20" />
-                    <img src={logoLight} alt="logo" className="auth-logo-light mx-auto" height="20" />
+                    <Image src={logoDark} alt="logo" className="auth-logo-dark mx-auto" height="20" />
+                    <Image src={logoLight} alt="logo" className="auth-logo-light mx-auto" height="20" />
                   </Link>
                 </div>
 
                 <Row className="justify-content-center">
                   <Col sm={4}>
                     <div className="maintenance-img">
-                      <img src={maintenance} alt="" className="img-fluid mx-auto d-block" />
+                      <Image src={maintenance} alt="" className="img-fluid mx-auto d-block" />
                     </div>
                   </Col>
                 </Row>

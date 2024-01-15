@@ -5,6 +5,7 @@ import { Card, CardBody, Col, Container, Row } from "reactstrap"
 // import images
 import logodark from "../../assets/images/logo-dark.png"
 import logolight from "../../assets/images/logo-light.png"
+import Image from "next/image"
 
 const EmailVerification = () => {
 
@@ -19,13 +20,13 @@ const EmailVerification = () => {
             <Col lg={12}>
               <div className="text-center mb-5 text-muted">
                 <Link to="/dashboard" className="d-block auth-logo">
-                  <img
+                  <Image
                     src={logodark}
                     alt=""
                     height="20"
                     className="auth-logo-dark mx-auto"
                   />
-                  <img
+                  <Image
                     src={logolight}
                     alt=""
                     height="20"

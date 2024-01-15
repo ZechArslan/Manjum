@@ -2,6 +2,7 @@ import React from "react";
 import { Card, CardBody, Col, Input } from "reactstrap";
 import { Link } from "react-router-dom";
 import { archiveData, categoriesData, popularPosts, tagsData } from "common/data";
+import Image from "next/image";
 interface badge {
   text: string,
   color: string,
@@ -100,7 +101,7 @@ const RightBar = () => {
                   <Link to="#" className="list-group-item text-muted py-3 px-2" key={index}>
                     <div className="d-flex align-items-center">
                       <div className="me-3">
-                        <img
+                        <Image
                           src={item.imageSrc}
                           alt=""
                           className="avatar-md h-auto d-block rounded"

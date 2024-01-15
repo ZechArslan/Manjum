@@ -5,7 +5,7 @@ import { Offcanvas, OffcanvasBody } from "reactstrap";
 //SimpleBar
 import SimpleBar from "simplebar-react";
 
-import "../../Components/CommonForBoth/rightbar.scss";
+// import "./Components/CommonForBoth/rightbar.scss";
 
 //Import images
 import bgimg1 from "../../assets/images/sidebar/img1.jpg";
@@ -24,7 +24,7 @@ import {
   changeSidebarImageType,
   changeLayout,
   changeLeftSidebarType
-} from "slices/thunk";
+} from "../../slices/thunk";
 
 //constants
 import {
@@ -38,6 +38,7 @@ import {
 } from "../constants/layout";
 import { Link } from "react-router-dom";
 import { createSelector } from "reselect";
+import Image from "next/image";
 interface sidebar {
   show: boolean,
   toggleCanvas: any
@@ -387,7 +388,7 @@ const RightSidebar = ({ toggleCanvas, show }: sidebar) => {
                           }
                         }}
                       />
-                      <label htmlFor="leftsidebarThemebgimg1"><img alt="sidebar bg img" width="90" className="themesideimage rounded" src={bgimg1} /></label>
+                      <label htmlFor="leftsidebarThemebgimg1"><Image alt="sidebar bg img" width="90" className="themesideimage rounded" src={bgimg1} /></label>
                       <input
                         type="radio"
                         id="leftsidebarThemebgimg2"
@@ -400,7 +401,7 @@ const RightSidebar = ({ toggleCanvas, show }: sidebar) => {
                           }
                         }}
                       />
-                      <label htmlFor="leftsidebarThemebgimg2"><img alt="sidebar bg img" width="90" className="themesideimage rounded" src={bgimg2} /></label>
+                      <label htmlFor="leftsidebarThemebgimg2"><Image alt="sidebar bg img" width="90" className="themesideimage rounded" src={bgimg2} /></label>
                       <input
                         type="radio"
                         id="leftsidebarThemebgimg3"
@@ -414,7 +415,7 @@ const RightSidebar = ({ toggleCanvas, show }: sidebar) => {
                         }}
                       />
                       <label htmlFor="leftsidebarThemebgimg3">
-                        <img
+                        <Image
                           alt="sidebar bg img"
                           width="90"
                           className="themesideimage rounded"
@@ -433,7 +434,7 @@ const RightSidebar = ({ toggleCanvas, show }: sidebar) => {
                           }
                         }}
                       />
-                      <label htmlFor="leftsidebarThemebgimg4"><img alt="sidebar bg img" width="90" className="themesideimage rounded" src={bgimg4} /></label>
+                      <label htmlFor="leftsidebarThemebgimg4"><Image alt="sidebar bg img" width="90" className="themesideimage rounded" src={bgimg4} /></label>
                       <input
                         type="radio"
                         id="leftsidebarThemenone"
@@ -462,13 +463,13 @@ const RightSidebar = ({ toggleCanvas, show }: sidebar) => {
               </div>
               <h6 className="text-center">Choose Layouts</h6>
               <div className="mb-2">
-                <a href="//skote-v-light.react.themesbrand.com"><img src={layout1} className="img-fluid img-thumbnail" alt="" /></a>
+                <a href="//skote-v-light.react.themesbrand.com"><Image src={layout1} className="img-fluid img-thumbnail" alt="" /></a>
               </div>
               <div className="mb-2">
-                <a href="//skote-v-dark.react.themesbrand.com"><img src={layout2} className="img-fluid img-thumbnail" alt="" /></a>
+                <a href="//skote-v-dark.react.themesbrand.com"><Image src={layout2} className="img-fluid img-thumbnail" alt="" /></a>
               </div>
               <div className="mb-2">
-                <a href="//skote-v-rtl.react.themesbrand.com"><img src={layout3} className="img-fluid img-thumbnail" alt="" /></a>
+                <a href="//skote-v-rtl.react.themesbrand.com"><Image src={layout3} className="img-fluid img-thumbnail" alt="" /></a>
               </div>
               <a className="btn btn-primary btn-block mt-3" href="//1.envato.market/skotereact"><i className="mdi mdi-cart ms-1"></i> Purchase Now</a>
             </div>

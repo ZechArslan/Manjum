@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "react-router-dom"
 import {
   Container,
   Card,
@@ -18,10 +17,11 @@ import Breadcrumbs from "../../Components/Common/Breadcrumb";
 // import images
 import img1 from "../../assets/images/small/img-2.jpg"
 import avtar1 from "../../assets/images/users/avatar-2.jpg"
+import Image from "next/image";
 
 const BlogDetails = () => {
   //meta title
-  document.title = "Blog Details | Skote - React Admin & Dashboard Template";
+  // document.title = "Blog Details | Skote - React Admin & Dashboard Template";
   return (
     <React.Fragment>
       <div className="page-content">
@@ -37,13 +37,13 @@ const BlogDetails = () => {
                         <div>
                           <div className="text-center">
                             <div className="mb-4">
-                              <Link
-                                to="#"
+                              <div
+                             
                                 className="badge bg-light font-size-12"
                               >
                                 <i className="bx bx-purchase-tag-alt align-middle text-muted me-1"></i>
                                 Project
-                              </Link>
+                              </div>
                             </div>
                             <h4>Beautiful Day with Friends</h4>
                             <p className="text-muted mb-4">
@@ -77,7 +77,7 @@ const BlogDetails = () => {
                           <hr />
 
                           <div className="my-5">
-                            <img
+                            <Image
                               src={img1}
                               alt=""
                               className="img-thumbnail mx-auto d-block"
@@ -199,15 +199,15 @@ const BlogDetails = () => {
                                       regular than that of the individual
                                     </p>
                                     <div>
-                                      <Link to="#" className="text-success">
+                                      <div  className="text-success">
                                         <i className="mdi mdi-reply"></i> Reply
-                                      </Link>
+                                      </div>
                                     </div>
                                   </div>
                                 </div>
                                 <div className="d-flex py-3 border-top">
                                   <div className="avatar-xs me-3">
-                                    <img
+                                    <Image
                                       src={avtar1}
                                       alt=""
                                       className="img-fluid d-block rounded-circle"
@@ -225,9 +225,9 @@ const BlogDetails = () => {
                                       quia dolor sit amet
                                     </p>
                                     <div>
-                                      <Link to="#" className="text-success">
+                                      <div  className="text-success">
                                         <i className="mdi mdi-reply"></i> Reply
-                                      </Link>
+                                      </div>
                                     </div>
 
                                     <div className="d-flex pt-3">
@@ -249,9 +249,9 @@ const BlogDetails = () => {
                                           exercise
                                         </p>
                                         <div>
-                                          <Link to="#" className="text-success">
+                                          <div  className="text-success">
                                             <i className="mdi mdi-reply"></i> Reply
-                                          </Link>
+                                          </div>
                                         </div>
                                       </div>
                                     </div>
@@ -276,9 +276,9 @@ const BlogDetails = () => {
                                       accumsan cursus velit
                                     </p>
                                     <div>
-                                      <Link to="#" className="text-success">
+                                      <div  className="text-success">
                                         <i className="mdi mdi-reply"></i> Reply
-                                      </Link>
+                                      </div>
                                     </div>
                                   </div>
                                 </div>
@@ -353,4 +353,4 @@ const BlogDetails = () => {
   )
 }
 
-export default BlogDetails
+export default BlogDetails;

@@ -1,3 +1,4 @@
+import Image from "next/image"
 import React from "react"
 import { Link } from "react-router-dom"
 import { Card, CardBody, Col, Row, UncontrolledTooltip } from "reactstrap"
@@ -15,7 +16,7 @@ const CardInvoice = ({ data }) => {
               <Col lg={4}>
                 <div className="text-lg-center">
                   {data.image ? (
-                    <img
+                    <Image
                       src={data.image}
                       className="avatar-sm me-3 mx-lg-auto mb-3 mt-1 float-start float-lg-none rounded-circle"
                       alt="img"

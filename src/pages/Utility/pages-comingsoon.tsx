@@ -9,6 +9,7 @@ import Countdown from "react-countdown"
 import logoDark from "../../assets/images/logo-dark.png"
 import logoLight from "../../assets/images/logo-light.png"
 import maintanence from "../../assets/images/coming-soon.svg"
+import Image from "next/image"
 
 const PagesComingsoon = () => {
   const renderer = ({ days, hours, minutes, seconds, completed }: any) => {
@@ -52,14 +53,14 @@ const PagesComingsoon = () => {
             <Col lg="12">
               <div className="text-center">
                 <Link to="/dashboard" className="d-block auth-logo">
-                  <img src={logoDark} alt="logo" className="auth-logo-dark mx-auto" height="20" />
-                  <img src={logoLight} alt="logo" className="auth-logo-light mx-auto" height="20" />
+                  <Image src={logoDark} alt="logo" className="auth-logo-dark mx-auto" height="20" />
+                  <Image src={logoLight} alt="logo" className="auth-logo-light mx-auto" height="20" />
 
                 </Link>
                 <Row className="justify-content-center mt-5">
                   <Col sm="4">
                     <div className="maintenance-img">
-                      <img
+                      <Image
                         src={maintanence}
                         alt=""
                         className="img-fluid mx-auto d-block"

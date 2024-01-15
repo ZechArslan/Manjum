@@ -2,7 +2,7 @@ import React from "react";
 import ReactApexChart from "react-apexcharts";
 import getChartColorsArray from "../../../Components/Common/ChartDynamicColor";
 
-const Apaexlinecolumn = ({dataColors}:any) => {
+const Apaexlinecolumn = ({ dataColors }: any) => {
   const apaexlineColumnColors = getChartColorsArray(dataColors);
   const series = [
     {
@@ -67,7 +67,7 @@ const Apaexlinecolumn = ({dataColors}:any) => {
     },
     tooltip: {
       y: {
-        formatter: function (val:any) {
+        formatter: function (val: any) {
           return "$ " + val + " thousands";
         },
       },
@@ -75,7 +75,14 @@ const Apaexlinecolumn = ({dataColors}:any) => {
   };
 
   return (
-    <ReactApexChart options={options} series={series} type="bar" height={350} />
+    typeof window !== "undefined" && (
+      <ReactApexChart
+        options={options}
+        series={series}
+        type="bar"
+        height={350}
+      />
+    )
   );
 };
 

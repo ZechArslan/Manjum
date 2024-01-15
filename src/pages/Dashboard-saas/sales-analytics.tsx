@@ -1,7 +1,9 @@
 import React from "react";
 import { Row, Col, Card, CardBody, CardTitle } from "reactstrap";
-import ReactApexChart from "react-apexcharts";
-import getChartColorsArray from "../../Components/Common/ChartDynamicColor";
+import dynamic from "next/dynamic";
+const ReactApexChart = dynamic(() => import("react-apexcharts").then((mod) => mod.default), {
+  ssr: false
+});import getChartColorsArray from "../../Components/Common/ChartDynamicColor";
 
 interface ChartOptions {
   labels: string[];
@@ -40,10 +42,20 @@ const SalesAnalytics = ({ dataColors }: any) => {
       <Col xl={4}>
         <Card>
           <CardBody>
-            <CardTitle tag="h4" className="mb-4">Sales Analytics</CardTitle>
+            <CardTitle tag="h4" className="mb-4">
+              Sales Analytics
+            </CardTitle>
             <div>
               <div id="donut-chart">
-                <ReactApexChart options={options} series={series} type="donut" height={260} className="apex-charts" />
+                {typeof window !== "undefined" && (
+                  <ReactApexChart
+                    options={options}
+                    series={series}
+                    type="donut"
+                    height={260}
+                    className="apex-charts"
+                  />
+                )}
               </div>
             </div>
 
@@ -52,7 +64,8 @@ const SalesAnalytics = ({ dataColors }: any) => {
                 <Col xs={4}>
                   <div className="mt-4">
                     <p className="mb-2 text-truncate">
-                      <i className="mdi mdi-circle text-primary me-1" /> Product A
+                      <i className="mdi mdi-circle text-primary me-1" /> Product
+                      A
                     </p>
                     <h5>$ 2,132</h5>
                   </div>
@@ -60,7 +73,8 @@ const SalesAnalytics = ({ dataColors }: any) => {
                 <Col xs={4}>
                   <div className="mt-4">
                     <p className="mb-2 text-truncate">
-                      <i className="mdi mdi-circle text-success me-1" /> Product B
+                      <i className="mdi mdi-circle text-success me-1" /> Product
+                      B
                     </p>
                     <h5>$ 1,763</h5>
                   </div>
@@ -68,7 +82,8 @@ const SalesAnalytics = ({ dataColors }: any) => {
                 <Col xs={4}>
                   <div className="mt-4">
                     <p className="mb-2 text-truncate">
-                      <i className="mdi mdi-circle text-danger me-1" /> Product C
+                      <i className="mdi mdi-circle text-danger me-1" /> Product
+                      C
                     </p>
                     <h5>$ 973</h5>
                   </div>

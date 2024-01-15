@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import withRouter from "Components/Common/withRouter";
+import withRouter from "../../Components/Common/withRouter";
 import moment from "moment";
 import Flatpickr from 'react-flatpickr';
 import "flatpickr/dist/themes/material_blue.css";
@@ -9,24 +9,25 @@ import * as Yup from "yup";
 import { useFormik } from "formik";
 
 //Import Component
-import Breadcrumbs from "Components/Common/Breadcrumb";
-import DeleteModal from "Components/Common/DeleteModal";
+import Breadcrumbs from "../../Components/Common/Breadcrumb";
+import DeleteModal from "../../Components/Common/DeleteModal";
 
 //Import Images
-import companies01 from "assets/images/companies/img-1.png";
+import companies01 from "../../assets/images/companies/img-1.png";
 
 import {
   getProjects as onGetProjects,
   updateProject as onUpdateProject,
   deleteProject as onDeleteProject,
-} from "slices/thunk";
+} from "../../slices/thunk";
 import { createSelector } from 'reselect';
 
 //redux
 import { useSelector, useDispatch } from "react-redux";
-import Spinners from "Components/Common/Spinner";
+import Spinners from "../../Components/Common/Spinner";
 import { ToastContainer } from "react-toastify";
-import TableContainer from "Components/Common/TableContainer";
+import TableContainer from "../../Components/Common/TableContainer";
+import Image from "next/image";
 
 const ProjectStatus = ({ status }: any) => {
   switch (status) {
@@ -179,7 +180,7 @@ const ProjectsList = () => {
         id: "#",
         cell: (cellProps: any) => (
           <div className="avatar-sm bg-light rounded p-2">
-            <img src={cellProps.row.original.img} alt="" className="img-fluid rounded-circle" />
+            <Image src={cellProps.row.original.img} alt="" className="img-fluid rounded-circle" />
           </div>
         ),
         enableColumnFilter: false,
@@ -233,7 +234,7 @@ const ProjectsList = () => {
                         {member.fullname}
                       </UncontrolledTooltip>
                       <Link to="#" className="team-member d-inline-block" id={`UncontrolledTooltipExample-${member.id}`} >
-                        <img src={member.img} className="rounded-circle avatar-xs" alt="" />
+                        <Image src={member.img} className="rounded-circle avatar-xs" alt="" />
                       </Link>
                     </>
                     :
@@ -361,7 +362,7 @@ const ProjectsList = () => {
                               </div>
                               <div className="avatar-lg p-1">
                                 <div className="avatar-title bg-light rounded-circle">
-                                  <img src={selectedImage || companies01} alt="" id="customer-img" className="avatar-md rounded-circle object-cover" />
+                                  <Image src={selectedImage || companies01} alt="" id="customer-img" className="avatar-md rounded-circle object-cover" />
                                 </div>
                               </div>
                             </div>

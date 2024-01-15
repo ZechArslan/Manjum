@@ -126,15 +126,15 @@ export const changeLeftSidebarType = (sidebarType: any) => async (dispatch: any)
             case "condensed":
 
                 manageBodyClass("sidebar-enable", "add")
-                if (window.screen.width >= 992) {
-                    manageBodyClass("vertical-collpsed", "remove")
-                    manageBodyClass("sidebar-enable", "remove")
-                    manageBodyClass("vertical-collpsed", "add")
-                    manageBodyClass("sidebar-enable", "add")
-                } else {
-                    manageBodyClass("sidebar-enable", "add")
-                    manageBodyClass("vertical-collpsed", "add")
-                }
+                // if (window.screen.width >= 992) {
+                //     manageBodyClass("vertical-collpsed", "remove")
+                //     manageBodyClass("sidebar-enable", "remove")
+                //     manageBodyClass("vertical-collpsed", "add")
+                //     manageBodyClass("sidebar-enable", "add")
+                // } else {
+                //     manageBodyClass("sidebar-enable", "add")
+                //     manageBodyClass("vertical-collpsed", "add")
+                // }
                 break
             default:
                 changeBodyAttribute("data-sidebar-size", "")

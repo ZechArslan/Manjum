@@ -7,6 +7,7 @@ import Breadcrumbs from "../../Components/Common/Breadcrumb";
 
 //import images
 import smallImage from "../../assets/images/small/img-1.jpg";
+import Image from 'next/image';
 
 const UiPlaceholders = () => {
 
@@ -28,7 +29,7 @@ const UiPlaceholders = () => {
                                     <Row className="gap-4">
                                         <Col lg={5}>
                                             <Card className="shadow-none border mb-0">
-                                                <img src={smallImage} className="card-img-top" alt="..." />
+                                                <Image src={smallImage} className="card-img-top" alt="..." />
 
                                                 <CardBody>
                                                     <h5 className="card-title">Card title</h5>
@@ -41,7 +42,7 @@ const UiPlaceholders = () => {
 
                                         <Col lg={5}>
                                             <Card className="card shadow-none border mb-0" aria-hidden="true">
-                                                <img src={smallImage} className="card-img-top" alt="..."/>
+                                                <Image src={smallImage} className="card-img-top" alt="..."/>
                                                     <CardBody>
                                                         <h5 className="card-title placeholder-glow">
                                                             <span className="placeholder col-6"></span>

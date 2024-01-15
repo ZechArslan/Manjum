@@ -9,18 +9,18 @@ import avatar7 from "../../assets/images/users/avatar-7.jpg";
 import avatar8 from "../../assets/images/users/avatar-8.jpg";
 
 //import images
-import adobe from "assets/images/companies/adobe.svg";
-import adobephotoshop from "assets/images/companies/adobe-photoshop.svg";
-import airbnb from "assets/images/companies/airbnb.svg";
-import amazon from "assets/images/companies/amazon.svg";
-import flutter from "assets/images/companies/flutter.svg";
-import mailchimp from "assets/images/companies/mailchimp.svg";
-import line from "assets/images/companies/line.svg";
-import spotify from "assets/images/companies/spotify.svg";
-import wordpress from "assets/images/companies/wordpress.svg";
-import upwork from "assets/images/companies/upwork.svg";
-import sass from "assets/images/companies/sass.svg";
-import reddit from "assets/images/companies/reddit.svg";
+import adobe from "../../assets/images/companies/adobe.svg";
+import adobephotoshop from "../../assets/images/companies/adobe-photoshop.svg";
+import airbnb from "../../assets/images/companies/airbnb.svg";
+import amazon from "../../assets/images/companies/amazon.svg";
+import flutter from "../../assets/images/companies/flutter.svg";
+import mailchimp from "../../assets/images/companies/mailchimp.svg";
+import line from "../../assets/images/companies/line.svg";
+import spotify from "../../assets/images/companies/spotify.svg";
+import wordpress from "../../assets/images/companies/wordpress.svg";
+import upwork from "../../assets/images/companies/upwork.svg";
+import sass from "../../assets/images/companies/sass.svg";
+import reddit from "../../assets/images/companies/reddit.svg";
 
 const jobs = [
     {
